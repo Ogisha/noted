@@ -1,0 +1,523 @@
+body {
+	font-family: "Times New Roman";
+	font-size: 18px;
+}
+
+.btn-group-vertical > .btn,
+.btn-group-vertical > .btn-group,
+.btn-group-vertical > .btn-group > .btn {
+  float: right;
+}
+
+#bodyBack {
+	position: absolute;
+	opacity: .75;
+}
+
+select {
+	width: 60%;
+}
+
+#section2 {
+	background: url(images/background.jpg);
+	background-size: cover;
+	border: 2px solid cornflowerBlue;
+	border-radius: 18px;
+}
+
+#section3, #section1 {
+	background: transparent;
+	border-radius: 14px;
+	border: 2px solid cornflowerBlue;
+	border-radius: 18px
+} 
+
+#fontsize {
+	display: inline-block;
+	float: left;
+	width:50%;
+}
+
+#fontfamily {
+	display: inline-block;
+	float: right;
+	width: 50%;
+}
+
+#submitSound, #resetSoundChangeBtn {
+	font-size: 1.65rem;
+	width: 60%;
+	margin-left: 20%;
+	padding: 5% 3% 5% 3%;
+	margin-top: 1%;
+	margin-bottom: 3%;
+	border-radius: 8px;
+}
+
+#sideDivLeft p {
+	font-family: monospace;
+	font-size: 1.35rem;
+	padding-top: 5%;
+	padding-bottom: 4%;
+}
+
+#login-sign-in-link {
+	color: blue;
+	text-decoration: none;
+}
+
+#login-buttons {
+	margin-top: 2%;
+	margin-left: 1%;
+}
+
+.comment1 {
+	font-style: italic;
+	text-align: right;
+	color: red;
+}
+
+textarea {
+	font-family: monospace;
+	font-size: 1.3em;
+	width: 95%;
+	padding: 2.5% 5% 0 5%;
+	text-indent: 25px;
+	line-height: 1.3em;
+}
+
+#unregis {
+	font-size: 2rem;
+	letter-spacing: .15em;
+	font-weight: 800;
+}
+
+.hidden2 {
+	visibility: hidden;
+}
+
+.fa-4x {
+	margin-top: 2.5%;
+}
+
+header {
+	padding-top: 1.5%;
+	font-family: Verdana;
+	color: white;
+	text-align: center;
+	font-style: oblique;
+	letter-spacing: 1px;
+	word-spacing: 1.5px;
+}
+
+h3 {
+	text-shadow: 1px 2px #333;
+	font-size: 2.2em;
+	line-height: 1.2em;
+	font-weight: 800;
+	padding-bottom: 4%;
+}
+
+.fa2 {
+	margin-right: 1.5%;
+	text-shadow: 1px 2px black;
+	color: white;
+}
+
+.textInput {
+	padding-left: 20%;
+	padding-top: 3.5%;
+	font-family: Monospace sans;
+	color: black;
+	font-weight: 300;
+}
+
+#success {
+	color: green;
+	font-size: 1.5rem;
+	letter-spacing: .035em;
+}
+
+hr {
+	margin-top: 0%;
+	margin-left: 20%;
+	width: 60%;
+}
+
+#sideDivRight h4 {
+	padding-top: 5%;
+	padding-bottom: 5%;
+	font-size: 4rem;
+	font-weight: 800;
+	color: white;
+	text-shadow: 2px 2px black;
+}
+
+.podInfo {
+	padding-top: 4%;
+}
+
+.podInfo2 {
+	padding-top: 5%;
+	padding-bottom: 4%;
+}
+
+#vertBtn1, #vertBtn3 {
+	display: inline-block;
+	float: left;
+	width:50%;
+}
+
+#about .modal-header, #about .modal-footer {
+	background: url(images/favBackground2.jpg);
+	background-size: cover;
+}
+
+#vertBtn2, #vertBtn4 {
+	display: inline-block;
+	float: right;
+	width: 50%;
+}
+
+.btn4 {
+	padding-top: 2%;
+	padding-bottom: 3%;
+}
+
+th {
+	background: red;
+	color: white;
+	letter-spacing: .15em;
+}
+
+.sideDivBtn {
+	letter-spacing: .5em;
+}
+
+.buttonsSet {
+	padding-top: 10%;
+	padding-bottom: 5%;
+}
+
+.btn-primary {
+	border-radius: 4px;
+	font-size: 1.05em;
+	letter-spacing: .01em;
+	width: 100%;
+}
+
+#settings {
+	font-size: 1.25rem;
+}
+
+#settings p {
+	padding-bottom: 7.5%;
+}
+
+.settingsOptions {
+	text-align: left;
+}
+
+#mainDiv {
+	max-width: 100%;
+}
+
+#more a {
+	font-size: 1em;
+	color: blue;
+	text-shadow: 1px 1px lightBlue;
+}
+
+#more a:hover {
+	text-decoration: none;
+	letter-spacing: .1em;
+	font-style: oblique;
+}
+
+.note1 {
+	padding: 2% 0 0 4%;
+	background: url(images/wall1.png);
+	background-size: 100% 100%;
+}
+
+.notesInfo1 {
+	font-family: "Times New Roman";
+	font-size: .95em;
+	font-style: oblique;
+	line-height: .7em;
+	padding-top: .25em;
+}
+
+#ni4 {
+	padding-left: 22%;
+	padding-bottom: 5%;
+}
+
+.buttons {
+	padding-top: 2%;
+	padding-bottom: .75%;
+}
+
+#note, .notesList {
+	margin-top: 2%;
+	padding: 0 3%;
+}
+
+.noteslist, .addressbook {
+	background: url("images/notesListBack.jpg");
+	background-size:cover;
+	position: relative;
+	font-family: verdana;
+	text-align: left;
+	border: 3px ridge brown;
+	border-left: none;
+	border-right: none;
+	border-radius: 16px;
+	margin-top: 0%;
+	margin-bottom: 2%;
+	height: 52vh;
+	overflow: auto;
+	padding-left: 5%;
+	padding-right: 2%;
+}
+
+.social, .logoImage {
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+#logo1 {
+	margin-left: 25%;
+}
+
+.cpP {
+	color: orange;
+	font-weight: 600;
+	font-size: 2.4rem;
+	letter-spacing: .15em;
+	line-height: .65em;
+}
+
+.onlyText {
+	font-family: verdana;
+	font-size:3em;
+	font-weight: bold;
+	color: white;
+	text-shadow: 1px 2px #666;
+}
+
+.notesButtons1 {
+	padding-left: 3%;
+	padding-bottom: 2.5%;
+}
+
+.followUs {
+	color: blue;
+	background: transparent;
+	text-shadow: 0 2px white;
+}
+
+.fixedSettings {
+	position: fixed;
+	bottom: 7.5%;
+	right:33%;
+}
+
+.desc {
+	font-size: .8em;
+	padding: 0;
+}
+
+.saveNote {
+	position: relative;
+	display: inline-block;
+	float: right;
+	top: 0;
+	margin-right: 3%;
+}
+
+.floatLeft {
+	padding-right: 2%;
+	display: inline-block;
+	float: left;
+	width: 36%;
+}
+
+.float-right {
+	margin-right: left;
+	display: inline-block;
+	float: left;
+	width: 62%;
+	line-height: 1.2em;
+}
+
+.favourites {
+	position: relative;
+	font-family: verdana;
+	padding: 2% 5% 2% 5%;
+	text-align: left;
+	background: white;
+	border: 3px ridge brown;
+	border-left: none;
+	border-right: none;
+	border-radius: 16px;
+	margin-left: .5%;
+	margin-top: 5%;
+	width: 94%;
+	height: 50vh;
+	overflow: auto;
+}
+
+.notesList h2 {
+	text-align: center;
+	padding-bottom: 1%;
+	font-family: Forque;
+	font-weight: 600;
+	letter-spacing: .1em;
+	text-shadow: 0 2px white;
+}
+
+h4 {
+	font-family: monospace;
+	font-size: 2.7rem;
+}
+
+.yellow {
+	background: yellow;
+}
+
+.favPar {
+	font-family: verdana;
+	font-size: 2rem;
+	padding-bottom: 5%;
+}
+
+.favourites a {
+	font-size: 1.8em;
+}
+
+.selected {
+	background: yellow;
+}
+
+.hidden2 {
+	visibility: hidden;
+}
+
+.favourites {
+	background: url(images/favBackground.jpg);
+	background-size:cover;
+}
+
+.fa2:hover {
+	color: black;
+}
+
+.table-bordered {
+	font-family: Verdana;
+	border: 2px solid black;
+	border-radius: 18px;
+	padding: 2%;
+}
+
+.table-bordered th {
+	padding: 2%
+}
+
+.table-bordered td {
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.red {
+	margin: .5%;
+	padding: 0%;
+	color: red;
+}
+
+.noteslist ul li {
+	margin-top: 2.5%;
+}
+	
+.selected2 {
+	font-weight:600;
+	padding: 3%;
+	border: 2px solid cornflowerBlue;
+	background: cornflowerBlue;
+	border-radius:18px;
+}
+
+.address {
+	background: url(images/addressBack.jpg);
+	backgroud-size: cover;
+}
+
+#editUrlBtn, #addUrlBtn {
+	background: transparent;
+	padding:1% 2% 1% 2%;
+	border: 1px solid black;
+	border-radius: 8px;
+}
+
+#submitEditedUrl p, #submitEditedUrl span, #submitUrl p, #submitUrl span {
+	font-family: monospace;
+}
+	
+.inputi {
+	border: "1px solid grey"
+}
+
+.modal-body {
+	background: url(images/addressBack.jpg);
+	background: cover;
+}
+
+/*  MEDIA QUERIES  */
+
+/*
+@media screen and (max-width: 1200px) {
+	header {
+		padding-top: 3%;
+		letter-spacing: .8px;
+		word-spacing: 1.2px;
+	}
+
+	h3 {
+		text-shadow: 1.25px 1.25px red;
+		font-size: 1.8em;
+		line-height: 1em;
+		font-weight: 700;
+		padding-bottom: 4%;
+	}
+	
+	.notesButtons1 {
+		padding-bottom: 1%;
+	}
+	
+	.textInput {
+		padding-top: 2%;
+		font-weight: 200;
+		font-size: 1.5rem;
+	}	
+}
+
+@media screen and (max-width: 692px) {
+	header {
+		padding-top: 2%;
+		letter-spacing: .6px;
+		word-spacing: 1px;
+	}
+
+	h3 {
+		text-shadow: 1px 1px red;
+		font-size: 1.5em;
+		line-height: 1.1em;
+		font-weight: 700;
+		padding-bottom: 3%;
+	}
+	
+	.notesButtons1 {
+		padding-bottom: .5%;
+	}
+}
+*/
