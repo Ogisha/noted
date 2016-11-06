@@ -2,12 +2,14 @@ if (Meteor.isClient) {
 
 	Template.body.events({
 
+
 		//  SHOW/HIDE SIDE MENUS
 
 	"click .showOptions": function(event) {
 		$(".hideOptions").removeClass("hidden");
 		$(".showOptions").addClass("hidden");
 		$("#section1").css("position", "absolute").animate({top: "0"}, 1500);
+		Meteor.call("createSomething");
 	},
 
 	"click .hideOptions": function(event) {

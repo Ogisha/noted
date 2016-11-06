@@ -1,12 +1,5 @@
-NotesList = new Mongo.Collection("notes");
-Addresses = new Mongo.Collection("addresses");
-Favourites = new Mongo.Collection("favourites");
-Versions = new Mongo.Collection("versions");
-
-if (Meteor.isClient) {
-	
-	var temp = new Date ();
-	var danas = temp.getDate();
+var temp = new Date ();
+var danas = temp.getDate();
 
 	Template.body.helpers({
 
@@ -103,8 +96,46 @@ if (Meteor.isClient) {
 	Template.addressbook.helpers({
 		"returnAll": function() {
 			return Addresses.find({}, { sort: { name: 1}});
+		},
+
+		"returnTypeOfContact": function() {
+			alert(this.type);
+			if (this.typeofContact == "friends")
+				return "<img src='images/friends.png' style='margin-left: 5%;'>";
+			if (this.type == "family") {
+				return "<img src='images/family.png' style='margin-left: 5%;'>";
+			}
+			if (this.type == "love")
+				return "<img src='images/love.png' style='margin-left: 5%;'>";
+			if (this.type == "businness")
+				return "<img src='images/business.png' style='margin-left: 5%;'>";
+			else
+				return "<img src='images/question.png' style='margin-left: 5%;'>";
+		},
+
+		"commentCheck": function(e) {
+			if(this.comment != "")
+				return true;
 		}
 	});
+
+	Template.addressbook.events({
+
+		"submit #addressbookComment": function(e) {
+			
+			e.preventDefault();
+
+			console.log(this._id);
+			console.log(e.target.commentBox.value);
+
+			Addresses.update({ _id: this._id}, { $set: {comment: e.target.commentBox.value} });
+		
+
+			
+
+		}
+	});
+
 	
 	
 	
@@ -150,6 +181,8 @@ if (Meteor.isClient) {
 			else
 				return false;
 		},
+
+		
 		
 		"editBookmark": function() {
 			
@@ -232,17 +265,5 @@ if (Meteor.isClient) {
 	});
 
 	Meteor.subscribe("notescol");
-}
-
-if (Meteor.isServer) {
-
-	Meteor.publish("notescol", function() {
-
-		var currentUserId = this.userId;
-		return NotesList.find({ createdBy: currentUserId });
-	})
-}
-
-
-
-
+	Meteor.subscribe("addressescol");
+	Meteor.subscribe("favcol");

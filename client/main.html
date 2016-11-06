@@ -282,11 +282,32 @@
 <audio id="sounds1"></audio>
 
 <script>
+
+
 		
 		var x = 0;
 
 
 		//SECTION LEFT
+
+
+		$("body").on("click", ".comm4", function() {
+			$(this).toggleClass("hidden");  //.com4
+			$(this).parent().next().toggleClass("hidden")  //form
+			$(this).parent().prev().prev().toggleClass("hidden");  //name
+			$(this).parent().prev(".commentInput").toggleClass("hidden");
+
+
+		});
+
+		$("body").on("click", ".comm5", function() {
+			$(this).parent().parent().parent().prev().children().toggleClass("hidden");  //com4
+			$(this).parent().parent().parent().prev().prev().prev().toggleClass("hidden");
+			$(this).parent().parent().parent().prev().prev(".commentInput").toggleClass("hidden");
+			$(this).parent().parent().parent().toggleClass("hidden"); // NAME
+
+
+		});
 
 		$("#notesButton1, #notesButton2, #notesButton3, #notesButton4").on("click", function(){
 			if ($("#note").not(":visible"))
@@ -1138,12 +1159,31 @@
 	
 	<div class="addressbook">
 		{{#if check}}
-		<p><strong>Your 'Addressbook' is currently empty. Please, add some by clicking on the button bellow.</strong><br><i class="fa fa-long-arrow-down fa-2x" aria-hidden="true"></i></p>
+		<p><strong>Your 'Addressbook' is currently empty. Please, add some by clicking on the "Save" button bellow.</strong><br><i class="fa fa-long-arrow-down fa-2x" aria-hidden="true"></i></p>
 		{{else}}
 		<table class="table table-bordered">
 			
 			{{#each returnAll}}
-			<tr><th> <a href="#" data-toggle="collapse" data-target="#{{_id}}"> {{name}} <img src="glyphicons-500-family.png"></a></th></tr>
+			<tr>
+				<th> 
+					<a href="#" data-toggle="collapse" data-target="#{{_id}}"> {{name}} {{{returnTypeOfContact}}} </a>
+					{{#if commentCheck}}
+					<span class="commentInput">"{{comment}}"</span>
+					{{else}}
+					<span class="commentInput"></span>
+					{{/if}}
+					<a href="#"><span class="comm4 glyphicon glyphicon-comment sound" style="margin-top:1%"></span></a>
+					<form id="addressbookComment" class="hidden">
+						<div class="div2">
+							<button type="submit" class="clicked" style="background:transparent;border:none;"><img class="comm5" src="images/saved.png" style="margin-top:45%;"></button>
+						</div>
+						<div class="div1">
+							<a href="#"><img class="comm6" src="images/delete.png" style="margin-top:1%"></a>
+							<input type="text" class="comm3 contactComment" name="commentBox" placeholder="Enter your comment regarding this contact...">
+						</div>
+					</form>
+				</th>
+			</tr>
 			<span id="{{_id}}" class="collapse">
 				<tr><td>( <i class="fa fa-envelope" aria-hidden="true"></i> ) {{email}}</td></tr>
 				<tr><td>( <i class="fa fa-phone" aria-hidden="true"></i> ) {{telephone}}</td></tr>
