@@ -1,95 +1,83 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Notes</title>
+	<title>NOTED!</title>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
 
-	<img id="bodyBack" src="images/sea.jpg" alt="background">
+<img id="bodyBack" src="images/sea.jpg" alt="background">
 
-
-
-<div id="page" class="">
+<div id="page">
 	<div class="container-fluid">
 		<div class="row">
-		<div id="section2" class="col-md-offset-3 col-md-6">
+			<div id="section2" class="col-md-offset-3 col-md-6">
 				
 				<div id="mainDiv">
 				{{> loginButtons}}
-					<header class="text-center">
-						<h3>CREATE, EDIT <br/>& VIEW YOUR NOTES</h3>
-							<a class="links1" id="notesButton1" href="#"><i class="notesButtons1 fa fa2 sound fa-pencil fa-3x" aria-hidden="true"></i></a>
-							<a class="links1" id="notesButton2" href="#"><i class="notesButtons1 fa fa2 sound fa-sticky-note-o fa-3x" aria-hidden="true"></i></a>
-							<a class="links1" id="notesButton3" href="#"><i class="notesButtons1 fa fa2 sound fa-book fa-3x" aria-hidden="true"></i></a>
-							<a class="links1" id="notesButton4" href="#"><i class="notesButtons1 fa fa2 sound fa-star fa-3x" aria-hidden="true"></i></a>
-							<a class="links1" id="notesButton5" href="#"><i class="notesButtons1 fa fa2 sound fa-arrow-up fa-3x" aria-hidden="true"></i></a>
-							<a class="links1 hidden" id="notesButton6" href="#"><i class="notesButtons1 fa fa2 sound fa-arrow-down fa-3x" aria-hidden="true"></i></a>
-							<p class="textInput text-left">TASK: </p><hr />
-					</header>
+				<header class="text-center">
+					<h3>CREATE, EDIT <br/>& VIEW YOUR NOTES</h3>
+						<a class="links1" id="notesButton1" href="#/"><i class="notesButtons1 fa fa2 sound fa-pencil fa-3x jq-mouseleave" aria-hidden="true"></i></a>
+						<a class="links1" id="notesButton2" href="#/"><i class="notesButtons1 fa fa2 sound fa-sticky-note fa-3x jq-mouseleave" aria-hidden="true"></i></a>
+						<a class="links1" id="notesButton3" href="#/"><i class="notesButtons1 fa fa2 sound fa-book fa-3x jq-mouseleave" aria-hidden="true"></i></a>
+						<a class="links1" id="notesButton4" href="#/"><i class="notesButtons1 fa fa2 sound fa-star fa-3x jq-mouseleave" aria-hidden="true"></i></a>
+						<a class="links1" id="notesButton5" href="#/"><i class="notesButtons1 fa fa2 sound fa-arrow-up fa-3x jq-mouseleave" aria-hidden="true"></i></a>
+						<a class="links1 hidden" id="notesButton6" href="#/"><i class="notesButtons1 fa fa2 sound fa-arrow-down fa-3x jq-mouseleave" aria-hidden="true"></i></a>
+						<p class="textInput text-left">TASK: </p><hr />
+				</header>
 
-						
-
-
-
-					<main>
-						<div id="note">
-
+				<main>
+					<div id="note">
 						{{#if currentUser}}
-							<div class="note1 container-fluid">
-								<div class="floatLeft">
-									<div class="notesInfo">
-										<p id="ni1" class="notesInfo1"><i>Day: </i></p>
-										<p id="ni2" class="notesInfo1"><i>Date: </i></p>
-										<p id="ni3" class="notesInfo1"><i>Time: </i></p>
-										<p class="notesInfo1">--------------</p>
-									</div>
-
-									<div class="pinned text-right">
-										<img src="images/pinned.png" class="img-responsive hidden pin" style="width:35%; margin-left:65%;">
-										<p id="success"></p>
-									</div>
+						<div class="note1 container-fluid">
+							<div class="floatLeft">
+								<div class="notesInfo">
+									<p id="ni1" class="notesInfo1"><i>Day: </i></p>
+									<p id="ni2" class="notesInfo1"><i>Date: </i></p>
+									<p id="ni3" class="notesInfo1"><i>Time: </i></p>
+									<p class="notesInfo1">--------------</p>
 								</div>
 
-								<div class="float-right">
-									<textarea id="singleNote" rows="8" placehold="Enter your note here... " maxlength="160" name="singleNote"></textarea> 
-									<p id="ni4" class="notesInfo1 text-right" style="margin-right:5%"><i>Maximum characters allowed: <strong>160</strong></i></p>
+								<div class="pinned text-right">
+									<img src="images/pinned.png" class="img-responsive hidden pin" style="width:40%; margin-left:65%;">
+									<p id="success"></p>
 								</div>
 							</div>
 
-						{{/if}}
-							<div id="dugmad1" class="{{isLogedIn}}">
-							{{#if currentUser}}
-								<a class="links1 showOptions hidden-sm" id="footerBtn1" href="#"><i class="notesButtons fa2 fa sound fa-wrench fa-3x" aria-hidden="true" style="margin-left:3%;"></i></a>
-								<a class="links1 hideOptions hidden hidden-sm" id="footerBtn2" href="#"><i class="fa fa2 fa-arrow-right fa-3x" aria-hidden="true" style="margin-left:3%;"></i></a>
-								<a class="links1" id="footerBtn3" href="#"><i class="notesButtons fa2 fa fa-floppy-o fa-3x" aria-hidden="true" style="margin-left:28%;"></i></a>
-								<a class="links1" id="footerBtn4" href="#"><i class="notesButtons fa2 fa sound fa-trash fa-3x" aria-hidden="true"></i></a>
-								<a class="links1 showInfo hidden-sm" id="footerBtn5" href="#"><i class="footerBtn fa fa2 sound fa-info fa-3x" aria-hidden="true" style="margin-left:30%;"></i></a>
-								<a class="links1 hideInfo hidden hidden-sm" id="footerBtn6" href="#"><i class="footerBtn fa fa2 fa-arrow-left fa-3x" aria-hidden="true" style="margin-left:30%;"></i></a>
-								{{/if}}
+							<div class="float-right">
+								<textarea id="singleNote" rows="8" placehold="Enter your note here... " maxlength="160" name="singleNote"></textarea> 
+								<p id="ni4" class="notesInfo1 text-right" style="margin-right:5%"><i>Maximum characters allowed: <strong>160</strong></i></p>
 							</div>
-
 						</div>
 
-											{{#if currentUser}}
-
-						<div class="notesList meni hidden">{{> notebook }}</div>
-						<div class="address meni hidden">{{> addressbook }}</div>
-						<div id="favourites" class="hidden">{{> favs }}</div> 
-											{{else}}
-					<p id="unregis" class="invisible text-center text-danger"><lead>Please log in to continue</lead></p>
 						{{/if}}
+						<div id="dugmad1" class="{{isLogedIn}}">
+						{{#if currentUser}}
+							<a class="links1 showOptions hidden-xs hidden-sm" id="footerBtn1" href="#/"><i class="notesButtons fa2 fa sound fa-wrench fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:3%;"></i></a>
+							<a class="links1 hideOptions hidden hidden-xs hidden-sm" id="footerBtn2" href="#/"><i class="fa fa2 fa-arrow-right fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:3%;"></i></a>
+							<a class="links1" id="footerBtn3" href="#/"><i class="jq-small1 notesButtons fa2 fa fa-floppy-o fa-3x jq-mouseleave" aria-hidden="true"></i></a>
+							<a class="links1" id="footerBtn4" href="#/"><i class="jq-small2 notesButtons fa2 fa sound fa-trash fa-3x jq-mouseleave" aria-hidden="true"></i></a>
+							<a class="links1 showInfo hidden-xs hidden-sm" id="footerBtn5" href="#/"><i class="footerBtn fa fa2 sound fa-info fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:27%;"></i></a>
+							<a class="links1 hideInfo hidden hidden-xs hidden-sm" id="footerBtn6" href="#/"><i class="footerBtn fa fa2 fa-arrow-left fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:24%;"></i></a>
+							{{/if}}
+						</div>
+
+					</div>
+
+					{{#if currentUser}}
+					<div class="notesList meni hidden">{{> notebook }}</div>
+					<div class="address meni hidden">{{> addressbook }}</div>
+					<div id="favourites" class="hidden">{{> favs }}</div> 
+					{{else}}
+					<p id="unregis" class="invisible text-center text-danger"><lead>Please log in to continue</lead></p>
+					{{/if}}
 					</main>
 					
-						</div>
 				</div>
 			</div>
+		</div>
 
-			<div class="row"></div>
-
-			<div class="row">
-
-
+		<div class="row">
 			<div id="section1" class="col-sm-6 col-md-3 col-md-pull-9">
 				<section id="sideDivLeft" class="text-center">
 					<h2>Settings:</h2>
@@ -159,129 +147,175 @@
 						<div id="databaseSettings" class="collapse">
 							<p class="text-center"> ---  DATABASE --- </p>
 							<span>Reset:</span><br>
-							<input type="checkbox" name="dbOption" value="notes"> All saved notes<br>
-							<input type="checkbox" name="dbOption" value="addressbook"> The addressbook<br>
-							<input type="checkbox" name="dbOption" value="favs"> The favourites<br>
-							<input type="checkbox" name="dbOption" value="all"> Entire database!<br>
+							<input type="checkbox" id="dbEmpty1" name="dbOption" value="notes"> All saved notes<br>
+							<input type="checkbox" id="dbEmpty2" name="dbOption" value="addressbook"> The addressbook<br>
+							<input type="checkbox" id="dbEmpty3" name="dbOption" value="favs"> The favourites<br>
+							<input type="checkbox" id="dbEmpty4" name="dbOption" value="all"> Entire database!<br>
 								
-							<button id="confirmDbChangeBtn" type="button" class="disabled btn btn-danger">Confirm changes?</button>
+							<button id="confirmDbChangeBtn" type="button" disabled class="btn btn-danger" data-toggle="modal" data-target="#confirmDbChanges">Confirm changes?</button>
+
+							<div id="confirmDbChanges" class="modal fade" role="dialog">
+							  	<div class="modal-dialog">
+
+							    <div class="modal-content">
+							      <div class="modal-body">
+							        <h2>Confirm that you would like to reset the following collections:</h2>
+							        <p id="hide1" class="tempP hidden"><a href="#/" class="confirmDeleteDb" id="confirmation1"><img src="images/note.png"> Noteslist </a>
+							        <button type="button" id="definite1" class="proceedBtn btn btn-danger hidden2">PROCEED</button>
+							        <span class="text-success hidden2">Reset succesful!</span></p>
+							        <p id="hide2" class="tempP hidden"><a href="#/" class="confirmDeleteDb" id="confirmation2"><img src="images/address.png"> Addresses </a>
+							        <button type="button" id="definite2" class="proceedBtn btn btn-danger hidden2">PROCEED</button>
+							        <span class="text-success hidden2">Reset succesful!</span></p>
+							        <p id="hide3" class="tempP hidden"><a href="#/" class="confirmDeleteDb" id="confirmation3"><img src="images/star.png"> URL Bookmarks </a>
+							        <button type="button" id="definite3" class="proceedBtn btn btn-danger hidden2">PROCEED</button>
+							        <span class="text-success hidden2">Reset succesful!</span></p>
+							        <p id="hide4" class="tempP hidden"><a href="#/" class="confirmDeleteDb" id="confirmation4"><img src="images/alert.png"> Delete all! </a>
+							        <button type="button" id="definite4" class="proceedBtn btn btn-danger hidden2">PROCEED</button>
+							        <span class="text-success hidden2">Reset succesful!</span></p>
+							      </div>
+							      <div class="modal-footer">
+							        <button type="button" id="closeDbModal" class="btn btn-default" data-dismiss="modal">Close</button>
+							      </div>
+							    </div>
+
+							 </div>
 						</div>
+
 					</div>
-				</section>
-			</div>
+				</div>
+			</section>
+		</div>
 
+		<div class="clearfix visible-md-inline-block"></div>
 
-			
-
-				<div class="clearfix visible-md-inline-block"></div>
-
-			<div id="section3" class="col-sm-6 col-md-3 col-md-offset-9 col-sm-push-right-3">
-				<div id="sideDivRight" class="text-center">
-
-					<h4 class="text-center"><em>NOTED!</em></h4> 
-					<button type="button" class="btn btn-primary btn-justified sideDivBtn" data-toggle="collapse" data-target="#version">Version</button>
+		<div id="section3" class="col-sm-6 col-md-3 col-md-offset-9 col-sm-push-right-3">
+				
+			<div id="sideDivRight" class="text-center">
+				<h4 class="text-center"><em>NOTED!</em></h4> 
+				<button type="button" class="btn btn-primary btn-justified sideDivBtn" data-toggle="collapse" data-target="#version">Version</button>
 										
-					<div id="version" class="podInfo collapse">
-						<p>Current version: <i><b><a href="#" data-toggle="modal" data-target="#versions">{{returnVersion.ver}}</a></b></i></p>
+				<div id="version" class="podInfo collapse">
+					<p>Current version: <i><b><a href="#/" data-toggle="modal" data-target="#versions">{{returnVersion.ver}}</a></b></i></p>
 
-						<div id="versions" class="modal fade" role="dialog">
+					<div id="versions" class="modal fade" role="dialog">
   						<div class="modal-dialog">
     						<div class="modal-content">
-      						<div class="modal-header">
-        						<button type="button" class="close" data-dismiss="modal">&times;</button>
-        						<h4 class="modal-title">NOTED! versions</h4>
-        					</div>
-      						<div class="modal-body">
-      						{{#each returnAllVersions}}
-       							 <p><strong> {{ver}} </strong><small> {{createdOn}} </small><br>
-       							 <lead>{{comment}}</lead></p>
-       							 <p class="text-center"> ----- </p>
-       						{{/each}}          
-      						</div>
-      						<div class="modal-footer">
-        						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      						</div>
+	      						<div class="modal-header">
+	        						<button type="button" class="close" data-dismiss="modal">&times;</button>
+	        						<h4 class="modal-title">NOTED! versions</h4>
+	        					</div>
+	      						<div class="modal-body">
+	      						{{#each returnAllVersions}}
+	       							 <p><strong> {{ver}} </strong><small> {{createdOn}} </small><br>
+	       							 <lead>{{comment}}</lead></p>
+	       							 <p class="text-center"> ----- </p>
+	       						{{/each}}          
+	      						</div>
+	      						<div class="modal-footer">
+	        						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      						</div>
    							</div>
   						</div>
-						</div>
 					</div>
+				</div>
 
-					<button type="button" class="btn btn-primary menuRightBtn" data-toggle="collapse" data-target="#more">See More</button>
+				<button type="button" class="btn btn-primary menuRightBtn" data-toggle="collapse" data-target="#more">See More</button>
 											
-					<div id="more" class="podInfo2 collapse">
-						<a href="#about" data-toggle="modal" data-target="#about">ABOUT</a><br>
-						<a id="readme" href="README.MD" target="_blank">VIEW 'READ ME'</a><br>
-						<a href="mailto:pandurevic.o@gmail.com">CONTACT US</a><br>
-					</div>
+				<div id="more" class="podInfo2 collapse">
+					<a href="#about" data-toggle="modal" data-target="#about">ABOUT</a><br>
+					<a id="readme" href="README.txt" target="_blank">VIEW 'READ ME'</a><br>
+					<a href="mailto:pandurevic.o@gmail.com">CONTACT US</a><br>
+				</div>
 
-					<div id="about" class="modal fade" role="dialog">
+				<div id="about" class="modal fade" role="dialog">
   					<div class="modal-dialog">
     					<div class="modal-content">
-      					<div class="modal-header">
-        					<button type="button" class="close" data-dismiss="modal">&times;</button>
-        					<h4 class="modal-title">About NOTED! <span style="color:black;font-size:2rem;text-shadow:none;">v{{returnVersion.ver}}</span></h4>
-      					</div>
-      					<div class="modal-body">
-        					<p class="text-left" style="text-indent:50px">This application is still being tested and currently is in Beta. It was developed using Meteor, mongoDB, jQuery, Bootstrap, and plain (good-old) CSS.</p>
-									<p class="text-left" style="text-indent:50px">We hope you'll like our app or, at least, have a fair amount of sympathy towards our product presented here, since it was purely a JavaScript enthusiast's work :-).</p>
-									<p class="text-left" style="text-indent:50px">For more info (or for comments/suggestions), please feel free to write to: <a href="mailto:pandurevic.o@gmail.com">e-Mail</a></p>
-        					
-      					</div>
-      					<div class="modal-footer">
-        					<button id="closeModal" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-     						 </div>
-    					</div>
+	      					<div class="modal-header">
+	        					<button type="button" class="close" data-dismiss="modal">&times;</button>
+	        					<h4 class="modal-title">About NOTED! <span style="color:black;font-size:2rem;text-shadow:none;">v{{returnVersion.ver}}</span></h4>
+	      					</div>
+	      					<div class="modal-body">
+	        					<p class="text-left" style="text-indent:50px">This application is still being tested and currently is in Beta. It was developed using Meteor, mongoDB, jQuery, Bootstrap, and plain (good-old) CSS.</p>
+										<p class="text-left" style="text-indent:50px">We hope you'll like our app or, at least, have a fair amount of sympathy towards our product presented here, since it was purely a JavaScript enthusiast's work :-).</p>
+										<p class="text-left" style="text-indent:50px">For more info (or for comments/suggestions), please feel free to write to: <a href="mailto:pandurevic.o@gmail.com">e-Mail</a></p>
+	        					
+	      					</div>
+	      					<div class="modal-footer">
+	        					<button id="closeModal" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	     					</div>
+	    				</div>
   					</div>
-					</div>
+				</div>
 
-
-					<button type="button" class="btn btn-primary" data-toggle="collapse" data-target=".followUs">Follow Us</button>
+				<button type="button" class="btn btn-primary" data-toggle="collapse" data-target=".followUs">Follow Us</button>
 										
-					<div id="followUs" class="text-center">
-						<div class="followUs collapse podInfo2 col-sm-3 col-xs-12">
-							<a href="#"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
-						</div>
-
-						<div class="followUs collapse podInfo2 col-sm-3 col-xs-12">
-							<a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
-						</div>
-
-						<div class="followUs collapse podInfo2 col-sm-3 col-xs-12">
-							<a href="#"><i class="fa fa-google-plus fa-lg" aria-hidden="true"></i></a>
-						</div>
-
-						<div class="followUs collapse podInfo2 col-sm-3 col-xs-12">
-							<a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
-						</div>
+				<div id="followUs" class="text-center">
+					<div class="followUs collapse podInfo2 col-sm-3 col-xs-12">
+						<a href="https://github.com/ogisha/noted"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
 					</div>
+
+					<div class="followUs collapse podInfo2 col-sm-3 col-xs-12">
+						<a href="#/"><abbr title="comming soon"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></abbr></a>
+					</div>
+
+					<div class="followUs collapse podInfo2 col-sm-3 col-xs-12">
+						<a href="#/"><abbr title="comming soon"><i class="fa fa-google-plus fa-lg" aria-hidden="true"></i></abbr></a>
+					</div>
+
+					<div class="followUs collapse podInfo2 col-sm-3 col-xs-12">
+						<a href="#/"><abbr title="comming soon"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></abbr></a>
+					</div>
+				</div>
 						
-					<button class="btn btn-primary btn-justified" data-toggle="collapse" data-target="#copyright">Copyright</button>
+				<button class="btn btn-primary btn-justified" data-toggle="collapse" data-target="#copyright">Copyright</button>
 											
-					<div id="copyright" class="podInfo2 collapse">
-						<div class="logoImage text-center">
-							<img src="logo.jpg" id="logo1" class="img-responsive img-rounded" alt="logo" style="width:50%;">
-						</div>
-											
-						<p class="cpP"><span style="font-size:1.2rem;color:black;font-weight:300;">© 2016.</span><br>
-							minuscule epics</p>
+				<div id="copyright" class="podInfo2 collapse">
+					<div class="logoImage text-center">
+						<img src="images/logo.jpg" id="logo1" class="img-responsive img-rounded" alt="logo" style="width:50%;">
 					</div>
-										
-										<!--
-									<p class="text-left">
-											This application is still being tested and currently is in Beta. It was developed using Meteor, mongoDB, jQuery, Bootstrap, and plain (good-old) CSS.
-											We hope you'-->
+											
+					<p class="cpP"><span style="font-size:1.2rem;color:black;font-weight:300;">© 2016.</span><br>
+						minuscule epics</p>
 				</div>
 			</div>
-
 		</div>
 	</div>
 </div>
-
+</div>
 
 <audio id="sounds"></audio>
 <audio id="sounds1"></audio>
 
 <script>
+
+	$(document).ready(function() {
+		$("#ni1").append(dan);
+			$("#ni2").append(datum);
+			$(".pin").fadeOut();
+		$(window).on("resize", function() {
+			if ($(window).width() < 992) {
+			$("#section1, #section3").css("background", "url(images/sea.jpg)");
+
+			$("#dugmad1").css("padding-left", "21%");
+		}
+		else {
+			$("#section1, #section3").css("background", "transparent");
+			$("#dugmad1").css("padding-left", "0%");
+		}
+		})
+
+		if ($(window).width() < 992) {
+			$("#section1, #section3").css("background", "url(images/sea.jpg)");
+
+			$("#dugmad1").css("padding-left", "21%");
+		}
+		else {
+			$("#section1, #section3").css("background", "transparent");
+			$("#dugmad1").css("padding-left", "0%");
+		}
+		
+
+	})
 
 
 		
@@ -289,25 +323,6 @@
 
 
 		//SECTION LEFT
-
-
-		$("body").on("click", ".comm4", function() {
-			$(this).toggleClass("hidden");  //.com4
-			$(this).parent().next().toggleClass("hidden")  //form
-			$(this).parent().prev().prev().toggleClass("hidden");  //name
-			$(this).parent().prev(".commentInput").toggleClass("hidden");
-
-
-		});
-
-		$("body").on("click", ".comm5", function() {
-			$(this).parent().parent().parent().prev().children().toggleClass("hidden");  //com4
-			$(this).parent().parent().parent().prev().prev().prev().toggleClass("hidden");
-			$(this).parent().parent().parent().prev().prev(".commentInput").toggleClass("hidden");
-			$(this).parent().parent().parent().toggleClass("hidden"); // NAME
-
-
-		});
 
 		$("#notesButton1, #notesButton2, #notesButton3, #notesButton4").on("click", function(){
 			if ($("#note").not(":visible"))
@@ -318,21 +333,6 @@
 			}, 1500);
 
 		});
-
-		$("#settingsYes").on("click", function() {
-			if ($(".singleSetting").is(":hidden")) 
-				$(".singleSetting").fadeIn(1500).toggleClass("hidden");
-		});
-/*
-		$("#settingsNo").on("click", function() {
-			if ($(".singleSetting").is(":hidden")) {
-				$("#sideDivRight").toggleClass("hidden");	
-				$(".col-lg-offset-2").removeClass("col-lg-10").addClass("col-lg-8");	
-				$("#mainDiv").removeClass("col-md-7").addClass("col-md-9");	
-			}
-			$(".singleSvisibleetting").fadeOut(1500).toggleClass("hidden");
-		});
-*/
 		
 
 		$("#fontsBtn1").on("click", function() {
@@ -359,34 +359,11 @@
 			$("textarea").css("font-family", "Monospace");
 		});
 
-		$("#vertBtn1").on("click", function() {
-				$("#fontSettings").attr("class", "collapse");
-				$("#databaseSettings").attr("class", "collapse");
-				$("#languageSettings").attr("class", "collapse");
-		});
-
-		$("#vertBtn2").on("click", function() {
-				$("#soundSettings").attr("class", "collapse");
-				$("#databaseSettings").attr("class", "collapse");
-				$("#languageSettings").attr("class", "collapse");
-		});
-
-		$("#vertBtn3").on("click", function() {
-				$("#fontSettings").attr("class", "collapse");
-				$("#soundSettings").attr("class", "collapse");
-				$("#languageSettings").attr("class", "collapse");
-		});
-
-		$("#vertBtn4").on("click", function() {
-				$("#fontSettings").attr("class", "collapse");
-				$("#databaseSettings").attr("class", "collapse");
-				$("#soundSettings").attr("class", "collapse");
-		});
-
+/*
 		$("#tempBtn").on("click", function() {
 			if ($("#fontSettings").hasClass("in"))
 				$("#fontfamily, #fontsize").attr("class", "btn-group-vertical collapse");
-		});
+		});*/
 
 		$("#fontsizeBtn").on("click", function() {
 			$("#fontfamily").attr("class", "btn-group-vertical collapse");
@@ -424,70 +401,11 @@
 			$(".notesButtons1").removeClass("fa-4x").addClass("fa-3x");
 		});
 		
-		
-		var text1 = "Create new note"; var splitText1 = text1.split("");
-		var text2 = "View the saved notes"; var splitText2 = text2.split("");
-		var text3 = "View the Addressbook"; var splitText3 = text3.split("");
-		var text4 = "View your Bookmarks"; var splitText4 = text4.split("");
-		var text5 = "Expand working space"; var splitText5 = text5.split("");
-		var text6 = "Expand Header"; var splitText6 = text6.split("");
-		
-		
-		$("#notesButton1").on("mouseenter", function() {
-			typing(splitText1);
-		}).on("mouseleave", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-		
-		$("#notesButton2").on("mouseenter", function() {
-			typing(splitText2);
-		}).on("mouseleave", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-		
-		$("#notesButton3").on("mouseenter", function() {
-			typing(splitText3);
-		}).on("mouseleave", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-		
-		$("#notesButton4").on("mouseenter", function() {
-			typing(splitText4);
-		}).on("mouseleleave", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-		
-		$("#notesButton5").on("mouseenter", function() {
-			typing(splitText5);
-		}).on("mouseleave", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-		
-		$("#notesButton6").on("mouseenter", function() {
-			typing(splitText6);
-		}).on("mouseleleave", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-		
-		
 		//  HEADER: end
 		
 		
 		//  MAIN
-
-		var text7 = "Manage settings";  var splitText7 = text7.split("");
-		var text8 = "Collapse settings";  var splitText8 = text8.split("");
-		var text9 = "Save this note";  var splitText9 = text9.split("");
-		var text10 = "Reset current note";  var splitText10 = text10.split("");
-		var text11 = "Show info";  var splitText11 = text11.split("");
-		var text12 = "Collapse section";  var splitText12 = text12.split("");
-
+		
 		var text13 = "Delete selected note";  var splitText13 = text13.split("");
 		var text14 = "View the selected note";  var splitText14 = text14.split("");
 		var text15 = "Deselect note";  var splitText15 = text15.split("");
@@ -497,55 +415,10 @@
 
 		var text18 = "Edit this URL";  var splitText18 = text18.split("");
 		var text19 = "Save new URL";  var splitText19 = text19.split("");
-		var text20 = "Mark as loved";  var splitText20 = text20.split("");
+		var text20 = "Toggle loved status";  var splitText20 = text20.split("");
 		var text21 = "Delete from bookmarks";  var splitText21 = text21.split("");
 		var text22 = "Deselect";  var splitText22 = text22.split("");
 
-
-		
-		$("#footerBtn1, #footer2Btn1").on("mouseenter", function() {
-			typing(splitText7);
-		}).on("mouseleave", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-		
-		$("#footerBtn2, #footer2Btn2").on("mouseenter", function() {
-			typing(splitText8);
-		}).on("mouseleave", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-		
-		$("#footerBtn3").on("mouseenter", function() {
-			if ($(this).is(":visible"))
-				typing(splitText9);
-			}).on("mouseleave", function() {
-					$(".textInput").text("TASK: ");
-					clearInterval(x);
-		});
-		
-		$("#footerBtn4").on("mouseenter", function() {
-			if ($(this).is(":visible"))
-			typing(splitText10);
-		}).on("mouseleave", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-		
-		$("#footerBtn5, #footer2Btn5").on("mouseenter", function() {
-			typing(splitText16);
-		}).on("mouseleave", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-
-		$("#footerBtn6, #footer2Btn6").on("mouseenter", function() {
-			typing(splitText17);
-		}).on("mouseleave", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
 
 		$("#footer2Btn3").on("mouseenter", function() {
 				typing(splitText13);
@@ -633,199 +506,22 @@
 				clearInterval(x);
 		});
 
-		$("#footerBtn1, #footer2Btn1").on("click", function() {
-			$(this).toggleClass("hidden");
-			$("#footerBtn2, #footer2Btn2").toggleClass("hidden");
 
-			$("#section1").animate({left: "0"}, 750);
-			/*
-			if ($("#section3").is(":visible")) {
-				$("#page").attr("class", "col-sm-11");
-				$("#section2").addClass("col-sm-6");
-				$("#section2").css("padding-right", "1%"); 
-			}
-			else {
-				$("#page").attr("class", "col-sm-9");
-				$("#section2").addClass("col-sm-9"); 
-				$("#section2").css({"left": "7.5%",
-													"padding-right": "7.5%"
-												});
-			}
-			*/
-			/*
-			$("#section1").fadeIn("slow").toggleClass("hidden");
-			$("#page").removeClass("col-sm-offset-3");
-			*/
-		});
-
-		$("#footerBtn2").on("click", function() {
-			$(this).toggleClass("hidden");
-			$("#section2").removeClass("col-sm-9");
-
-			if ($("#section3").is(":visible")) {
-				$("#page").attr("class", "col-sm-8");
-			}
-			else {
-				$("#page").attr("class", "col-sm-6");
-			}
-			
-			$("#footerBtn1").toggleClass("hidden");
-			$("#section1").fadeOut().toggleClass("hidden");
-			$("#page").addClass("col-sm-offset-3");
-			$("#section2").css({"left": "0",
-													"padding-right": "0"
-												});
-		});
-
-		$(".buttons").on("click", "#footerBtn3", function(event) {
-			alert(event);
-			note = $("textarea").val();
-			NotesList.insert({ note: note, createdBy: Meteor.userId(), month: month, day: date1, hour: hours, minutes: minutes });
-			$("textarea").val("");
-			letters = 160;
-			$("#ni4").html("<i>Maximum characters allowed: <strong>" + letters + "</strong></i>");
-
-			$(".pin").toggleClass("hidden");
-			$('#sounds1').attr('src','chain.mp3');
-			$('#sounds1').prop("volume", 1);
-			$('#sounds1').get(0).play();
-
-			var success = "Saved Successsfully!";
-			var splitSuccess = success.split("");
-
-			var br1 = 0;
-			x1 = setInterval(function() {
-				$("#success").append(splitSuccess[br1]);
-				br1++;
-							
-				if (splitSuccess.length == br1)
-					clearInterval(x1);
-			},75);
-			
-		});
-		
-		$("#footerBtn4").click(function() {
-			$("textarea").val("");
-			letters = 160;
-			$("#ni4").html("<i>Maximum characters allowed: <strong>" + letters + "</strong></i>");
-		});
-
-		$("#footerBtn5").on("click", function() {
-			$(this).toggleClass("hidden");
-			$("#footerBtn6").toggleClass("hidden");
-			
-			if ($("#section1").is(":visible")) {
-				$("#page").attr("class", "col-sm-11");
-				$("#section2").addClass("col-sm-6"); 
-			}
-			else {
-				$("#page").attr("class", "col-sm-8 col-sm-offset-3");
-				$("#section2").addClass("col-sm-9"); 
-				$("#section2").css("right", "1%");
-				$(".col-sm-2").css("width", "16.7%");
-			}
-			
-			
-			$("#section3").fadeIn().toggleClass("hidden");
-		});
-
-		$("#footerBtn6").on("click", function() {
-			$(this).toggleClass("hidden");
-			$("#footerBtn5").toggleClass("hidden");
-			$("#section2").removeClass("col-sm-9");
-
-			if ($("#section1").is(":visible")) {
-				$("#page").attr("class", "col-sm-12");
-			}
-			else {
-				$("#page").attr("class", "col-sm-8");
-				$("#page").addClass("col-sm-offset-3");
-			}
-			
-			
-			$("#section3").fadeOut().toggleClass("hidden");
-			$("#page").addClass("col-sm-offset-3");
-			$("#section2").css({"left": "0",
-													"padding-right": "0"
-												});
-		});
-
-
-		//  MAIN: end
-
-
-		// SETTINGS
-
-		
-
-
-		//  SETTINGS: end
-		
-
-		//  FUNCTION:Typing
-
-		function typing(splitText) {
-			
-			var br = 0;
-			x = setInterval(function() {
-				$(".textInput").append(splitText[br]);
-				br++;
-				
-			if (splitText.length == br)
-				clearInterval(x);
-			},10);
-		}
-
-		//  FUNCTION: end
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		$(document).ready(function() {
-		/*	$(".notesList").height($("#note").height());*/
-			$("#ni1").append(dan);
-			$("#ni2").append(datum);
-			$(".pin").fadeOut();
-		});
-		
-		$("textarea").on("focus", function() {
-
-			if ($(".pin").is(":visible")) {
-				$(".pin").toggleClass("hidden");
-				$("#success").empty();
-			}
-		
-			$("#ni3").html("<i>Time:</i> " + sat);
-		});
-		
-		$("textarea").on("blur", function() {
-			$("#ni3").text("Time: ");
-		});
-		
-		datum = new Date();
-		var letters = 160;
-		var note = "";
-		
-		$("textarea").on("keydown", function() {
 	
-			letters--;
-			
-			if (letters > 0) 
-				$("#ni4").html("<i>Maximum characters allowed: <strong>" + letters + "</strong></i>");
-				
-			else if (letters <= 0) {
-				$("#ni4").html("Maximum characters allowed: " +  "<span style='background:red;padding-left:2%;padding-right:2%;'>0</span>");
-				alert("Maximum length reached! The following note can be saved: ");
-				alert($("textarea").val());
-			}
-		});
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -888,106 +584,7 @@
 			clearInterval(x);
 		});
 		
-		
 		// PAGE 1: NOTE
-		
-
-		
-		
-		
-		// KRETANJE KROZ GLAVNI MENI
-		
-		$("#notesButton1").on("click", function(event) {
-			if ($("#note").is(":hidden")) {
-				$("#note").toggleClass("hidden");
-				$(".buttons").show("slow");
-			}
-
-			if ($(".notesList").is(":visible")) {
-				$(".notesList").toggleClass("hidden");
-				$(".btn2").hide();
-			}
-			
-			if ($(".address").is(":visible")) {
-				$(".address").toggleClass("hidden");
-				$(".btn3").hide();
-			}
-
-			if ($("#favourites").is(":visible")) {
-				$("#favourites").toggleClass("hidden");
-				$(".btn4").hide();
-			}
-		});
-		
-		$("#notesButton2").on("click", function(event) {
-			if ($(".notesList").is(":hidden")) {
-				$(".notesList").toggleClass("hidden");
-				$(".btn2").show("slow");
-			}
-			
-			if ($("#note").is(":visible")) {
-				$("#note").toggleClass("hidden");
-				$(".buttons").hide();
-			}
-			
-			if ($(".address").is(":visible")) {
-				$(".address").toggleClass("hidden");
-				$(".btn3").hide();
-			}
-			
-			if ($("#favourites").is(":visible")) {
-				$("#favourites").toggleClass("hidden");
-				$(".btn4").hide();
-			}
-		});	
-		
-		$("#notesButton3").on("click", function(event) {
-			if ($(".address").is(":hidden")) {
-				$(".address").toggleClass("hidden");
-				$(".btn3").show("slow");
-			}
-			
-			if ($("#note").is(":visible")) {
-				$("#note").toggleClass("hidden");
-				$(".buttons").hide();
-			}
-			
-			if ($(".notesList").is(":visible")) {
-				$(".notesList").toggleClass("hidden");
-				$(".btn2").hide();
-			}
-			
-			if ($("#favourites").is(":visible")) {
-				$("#favourites").toggleClass("hidden");
-				$(".btn4").hide();
-			}
-		});	
-		
-		$("#notesButton4").on("click", function(event) {
-			if ($("#favourites").is(":hidden")) {
-				$("#favourites").toggleClass("hidden");
-				$(".btn4").show("slow");
-			}
-			
-			if ($("#note").is(":visible")) {
-				$("#note").toggleClass("hidden");
-				$(".buttons").hide();
-			}
-			
-			if ($(".notesList").is(":visible")) {
-				$(".notesList").toggleClass("hidden");
-				$(".btn2").hide();
-			}
-			
-			if ($(".address").is(":visible")) {
-				$(".address").toggleClass("hidden");
-				$(".btn3").hide();
-			}
-		});	
-
-		
-		//
-		
 		
 		var newDate = new Date();
 		var year = newDate.getFullYear();
@@ -1035,75 +632,28 @@
 		
 		var sat = hours + ":" + minutes;
 
-	/*	$(".links1").on("mouseenter", function() {
-		$(this).children().css("size", "1.2em");
-		});*/
 		
-		// BUTTON LINKS
-		
-		/*
-		$("#notesButton1").on("click", function() {
-			location.reload();
-		});
-	
-		*/
-		// end
-		
-		$(".notesList").on("mouseover", "#todayFa", function() {
-		
-			$("#todayFa").css("color", "red");
-		}).on("mouseleave", "#todayFa", function() {
-		
-			$("#todayFa").css("color", "black");
-		});;
-		
-		
-		$(".notesList").on("mouseover", "#olderFa", function() {
-		
-			$("#olderFa").css("color", "red");
-		}).on("mouseleave", "#olderFa", function() {
-		
-			$("#olderFa").css("color", "black");
-		});
-		
-		
-		$(".notesList").on("click", "#todayFa", function() {
-			$(".ul1").fadeToggle("slow");
-		});
-		
-		$(".notesList").on("click", "#olderFa", function() {
-			$(".ul2").fadeToggle("slow");
-		});
-		
-		$(".inputi").on("focus", function() {
-			$(this).css({
-						"background": "lightGrey",
-						"color": "red",
-						"border": "1px solid cornflowerBlue"
-					})
-		}).on("blur", function() {
-			$(this).css({
-						"background": "transparent",
-						"color": "black",
-						"border": "1px solid grey"
-					})
-				});
-
-		$("body").on("mouseenter", ".sound", function() {
-			$('#sounds').attr('src','blip.mp3');
-			$('#sounds').prop("volume", .1);
-			$('#sounds').get(0).play();
-		});
-
-		$("body").on("click", ".sound", function() {
-			$('#sounds').attr('src','button.mp3');
-			$('#sounds').prop("volume", .5);
-			$('#sounds').get(0).play();
-		});
-
 		$("#readme").on("click", function() {
-			alert("Please note that you're not exiting the program. 'Read me' file will be open in new tab.");
+			alert("Please note that you're not exiting the program. 'Read me' file will open in new tab.");
 		});
+
+		$(window).load(function() {
+			$("#ni1").append(dan);
+			$("#ni2").append(datum);
+			$(".pin").fadeOut();
+		});
+
+		function typing(splitText) {
+			
+	var br = 0;
+	x = setInterval(function() {
+		$(".textInput").append(splitText[br]);
+		br++;
+
+		if (splitText.length == br)
+			clearInterval(x);
+	},10);
+}
 
 	</script>
 
@@ -1113,44 +663,44 @@
 	
 	<div class="noteslist">
 		{{#if check}}
-			<p><strong>Notebook is currently empty. Please, add some notes before visiting this area again.</strong></p>
+		<p><strong>Notebook is currently empty. Please, add some notes before visiting this area again.</strong></p>
 		{{else}}
 			
-			<h2>YOUR SAVED NOTES, {{checkAll}} IN TOTAL: </h2>
-			<h4><i id="todayFa" class="fa fa-pencil-square" aria-hidden="true"></i> Today's unviewed: <strong>(<span class="red">{{checkTodayNo}}</span>)</strong></h4>
-			<ul class="ul1" style="list-style-type:none">
-				{{#each checkToday}}
-				<li class="savedNotes {{selected}}"><i><span style="font-size:.75em;">{{hour}}:{{minutes}}</span></i><br><span style="text-indent:10px;"> " {{note}} "</span>{{#unless viewed}}<i class="faViewed fa fa-check fa-lg" aria-hidden="true" style="margin-left:5%;"></i>{{/unless}}</li>
-				{{/each}}
-				<br><p style="padding-left:35%;">------</p>
-			</ul>
-			<h4><i id="olderFa" class="fa fa-pencil-square" aria-hidden="true"></i> Notes from before</h4>
-			<ul class="ul2" style="list-style-type:none">
-				{{#each checkOld}}
-				<li class="savedNotes {{selected}}"><i><span style="font-size:.75em;">{{month}}/{{day}}</span></i><br><span style="text-indent:10px;"> " {{note}} "</span></li>
-				{{/each}}
-				<br><p style="padding-left:35%;">------</p>
-			</ul>
+		<h2 class="text-center">YOUR SAVED NOTES, {{checkAll}} IN TOTAL: </h2>
+		<h4><i id="todayFa" class="fa fa-pencil-square jq-mouseleave sound" aria-hidden="true"></i> Today's unviewed: <strong>(<span class="red">{{checkTodayNo}}</span>)</strong></h4>
+		<ul class="ul1" style="list-style-type:none">
+		{{#each checkToday}}
+			<li class="savedNotes {{selected}}"><i><span style="font-size:.75em;">{{hour}}:{{minutes}}</span></i><br><span style="text-indent:10px;"> " {{note}} "</span>{{#unless viewed}}<i class="faViewed fa fa-check fa-lg" aria-hidden="true" style="margin-left:5%;"></i>{{/unless}}</li>
+		{{/each}}
+		<br><p style="padding-left:35%;">------</p>
+		</ul>
+		<h4><i id="olderFa" class="fa fa-pencil-square jq-mouseleave sound" aria-hidden="true"></i> Notes from before</h4>
+		<ul class="ul2" style="list-style-type:none">
+		{{#each checkOld}}
+			<li class="savedNotes {{selected}}"><i><span style="font-size:.75em;">{{month}}/{{day}}</span></i><br><span style="text-indent:10px;"> " {{note}} "</span></li>
+		{{/each}}
+		<br><p style="padding-left:35%;">------</p>
+		</ul>
 		{{/if}}
 	</div>
 
 	<div class="btn2">
-		<a class="links1 showOptions" id="footer2Btn1" href="#"><i class="notesButtons fa2 fa sound fa-wrench fa-3x" aria-hidden="true" style="margin-left:2%;"></i></a>
-		<a class="links1 hideOptions" id="footer2Btn2" href="#"><i class="fa fa2 fa-arrow-right fa-3x" aria-hidden="true" style="margin-left:2%;"></i></a>
+		<a class="links1 showOptions" id="footer2Btn1" href="#/"><i class="notesButtons fa2 fa sound fa-wrench fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:5%;"></i></a>
+		<a class="links1 hideOptions hidden" id="footer2Btn2" href="#/"><i class="fa fa2 fa-arrow-right fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:5%;"></i></a>
 				
 		{{#unless selected}}
-		<a id="noteslistBtn1" class="links1" href="#"><i class="notesButtons fa2 fa fa-trash sound fa-3x" aria-hidden="true" style="margin-left:22%"></i></a>
-		<a id="noteslistBtn2" class="links1" href="#"><i class="notesButtons fa2 fa fa-eye sound fa-3x" aria-hidden="true"></i></a>
-		<a id="noteslistBtn3" class="links1" href="#"><i class="notesButtons fa2 fa fa-eye-slash sound fa-3x" aria-hidden="true"></i></a>
+		<a id="noteslistBtn1" class="links1" href="#/"><i class="notesButtons fa2 fa fa-trash sound fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:17%"></i></a>
+		<a id="noteslistBtn2" class="links1" href="#/"><i class="notesButtons fa2 fa fa-eye sound fa-3x jq-mouseleave" aria-hidden="true"></i></a>
+		<a id="noteslistBtn3" class="links1" href="#/"><i class="notesButtons fa2 fa fa-eye-slash sound fa-3x jq-mouseleave" aria-hidden="true"></i></a>
 
 		{{else}}
-		<a id="noteslistBtn1" class="links1" href="#"><i class="notesButtons fa2 fa fa-trash fa-3x sound hidden2" aria-hidden="true" style="margin-left:22%"></i></a>
-		<a id="noteslistBtn2" class="links1" href="#"><i class="notesButtons fa2 fa fa-eye fa-3x sound hidden2" aria-hidden="true" ></i></a>
-		<a id="noteslistBtn3" class="links1" href="#"><i class="notesButtons fa2 fa fa-eye-slash fa-3x sound hidden2" aria-hidden="true"></i></a>
+		<a id="noteslistBtn1" class="links1 hidden2" href="#/"><i class="notesButtons fa2 fa fa-trash fa-3x sound jq-mouseleave" aria-hidden="true" style="margin-left:17%"></i></a>
+		<a id="noteslistBtn2" class="links1 hidden2" href="#/"><i class="notesButtons fa2 fa fa-eye fa-3x sound hidden2 jq-mouseleave" aria-hidden="true"></i></a>
+		<a id="noteslistBtn3" class="links1 hidden2" href="#/"><i class="notesButtons fa2 fa fa-eye-slash fa-3x sound hidden2 jq-mouseleave" aria-hidden="true"></i></a>
 		{{/unless}}
 
-		<a class="links1" id="footer2Btn5" href="#"><i class="footerBtn fa fa2 sound fa-info fa-3x" aria-hidden="true" style="margin-left:26%;"></i></a>
-		<a class="links1 hidden" id="footer2Btn6" href="#"><i class="fa fa2 fa-arrow-left fa-3x" aria-hidden="true" style="margin-left:26%;"></i></a>
+		<a class="links1 showInfo" id="footer2Btn5" href="#/"><i class="footerBtn notesButtons fa fa2 sound fa-info fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:26%;"></i></a>
+		<a class="links1 hideInfo hidden" id="footer2Btn6" href="#/"><i class="fa fa2 fa-arrow-left fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:21%;"></i></a>
 	</div>
 
 </template>
@@ -1165,21 +715,26 @@
 			
 			{{#each returnAll}}
 			<tr>
-				<th> 
-					<a href="#" data-toggle="collapse" data-target="#{{_id}}"> {{name}} {{{returnTypeOfContact}}} </a>
+				<th class="contactsFullName {{returnAddressClass}}"> 
+					<a id="contactFullName" href="#/" data-toggle="collapse" data-target="#{{_id}}"> {{name}} 
+					{{#if returnVip}}
+					<img src="images/vip.jpg" class="img-responsive" style="width:9%;display:inline-block;margin-left:2%;">
+					{{/if}}
+			
+					{{{returnTypeOfContact}}} </a>
 					{{#if commentCheck}}
 					<span class="commentInput">"{{comment}}"</span>
 					{{else}}
 					<span class="commentInput"></span>
 					{{/if}}
-					<a href="#"><span class="comm4 glyphicon glyphicon-comment sound" style="margin-top:1%"></span></a>
+					<a href="#/"><span class="comm4 glyphicon glyphicon-comment sound" style="margin-top:1%"></span></a>
 					<form id="addressbookComment" class="hidden">
 						<div class="div2">
 							<button type="submit" class="clicked" style="background:transparent;border:none;"><img class="comm5" src="images/saved.png" style="margin-top:45%;"></button>
 						</div>
 						<div class="div1">
-							<a href="#"><img class="comm6" src="images/delete.png" style="margin-top:1%"></a>
-							<input type="text" class="comm3 contactComment" name="commentBox" placeholder="Enter your comment regarding this contact...">
+							<a href="#/"><img class="comm6" src="images/delete.png" style="margin-top:1%"></a>
+							<input type="text" class="comm3 contactComment" name="commentBox" placeholder="Enter your comment regarding this contact..." value="{{returnComment.comment}}">
 						</div>
 					</form>
 				</th>
@@ -1194,26 +749,122 @@
 	</div>
 	
 	<div class="btn3">
-		<a class="links1 showOptions" id="footer4Btn1" href="#"><i class="notesButtons fa2 fa sound fa-wrench fa-3x" aria-hidden="true" style="margin-left:2%;"></i></a>
-		<a class="links1 hideOptions" id="footer4Btn2" href="#"><i class="fa fa2 fa-arrow-right fa-3x" aria-hidden="true" style="margin-left:2%;"></i></a>
-				
-		{{#unless returnClass}}
-		<a class="links1" id="trashFavButton" href="#"><i class="notesButtons fa2 fa fa-trash fa-3x" aria-hidden="true" style="padding-left:16%;"></i></a>
-			<a class="links1" id="deselect" href="#"><i class="notesButtons1 fa2 fa fa-eye-slash fa-3x" aria-hidden="true"></i></a>
-		<a href="#" data-toggle="modal" data-target="#editModal" id="editUrl"><i class="notesButtons1 fa2 fa fa fa-pencil-square fa-3x" aria-hidden="true" style="margin-left:1%;margin-top:3%;"></i></a>
+		<a class="links1 showOptions" id="footer4Btn1" href="#/"><i class="notesButtons fa2 fa sound fa-wrench fa-3x" aria-hidden="true" style="margin-left:7%;"></i></a>
+		<a class="links1 hideOptions hidden" id="footer4Btn2" href="#/"><i class="fa fa2 fa-arrow-right fa-3x" aria-hidden="true" style="margin-left:7%;"></i></a>
+
+		{{#unless returnAddressClass}}
+		<a href="#/" data-toggle="modal" data-target="#editAddress" id="footer4Btn4"><i class="notesButtons fa2 sound fa fa fa-pencil-square fa-3x" aria-hidden="true"></i></a>
+		<a class="links1" href="#/" id="footer4Btn5"><i class="notesButtons fa2 fa fa-trash fa-3x sound" aria-hidden="true" style="margin-left:14%;" id="footer4Btn6"></i></a>
+		<a class="links1" id="footer4Btn7" href="#/"><i class="notesButtons fa2 fa fa-eye-slash fa-3x " aria-hidden="true"></i></a>
 				
 		{{else}}
-		<a class="links1" id="trashFavButton" href="#"><i class="notesButtons fa2 fa fa-trash fa-3x hidden2" aria-hidden="true" style="padding-left:16%;"></i></a>
-			<a class="links1" id="deselect" href="#"><i class="notesButtons1 fa2 fa fa-eye-slash fa-3x" aria-hidden="true"></i></a>
-		<a href="#" data-toggle="modal" data-target="#myModal" id="addNewBookmark"><i class="notesButtons fa2 fa fa-floppy-o fa-3x" aria-hidden="true" style="margin-left:1%;margin-top:3%;"></i></a>
+		<a href="#/" data-toggle="modal" data-target="#newAddress"><i class="notesButtons fa2 fa sound fa-floppy-o fa-3x" aria-hidden="true"></i></a>
+		<a class="links1 hidden2" id="trashFavButton" href="#/"><i class="notesButtons fa2 fa fa-trash fa-3x sound hidden2" aria-hidden="true" style="margin-left:14%;"></i></a>
+		<a class="links1 hidden2" id="deselect" href="#/"><i class="notesButtons fa2 fa fa-eye-slash fa-3x sound hidden2" aria-hidden="true"></i></a>
+		
 		{{/unless}}
-		<a class="links1" id="footer4Btn5" href="#"><i class="footerBtn fa fa2 sound fa-info fa-3x" aria-hidden="true" style="margin-left:26%;"></i></a>
-		<a class="links1 hidden" id="footer4Btn6" href="#"><i class="fa fa2 fa-arrow-left fa-3x" aria-hidden="true" style="margin-left:26%;"></i></a>
-			
+		<a class="links1 showInfo" id="footer4Btn5" href="#/"><i class="footerBtn fa fa2 sound fa-info fa-3x" aria-hidden="true" style="margin-left:28%;"></i></a>
+		<a class="links1 hideInfo hidden" id="footer4Btn6" href="#/"><i class="fa fa2 fa-arrow-left fa-3x" aria-hidden="true" style="margin-left:26%;"></i></a>
 	</div>
 
-</template>
+	<div id="addressFavourites">
 
+		<div class="modal fade" id="newAddress" role="dialog">
+			<div class="modal-dialog">
+
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="Bookmark new URL">Add a new contact</h4>
+					</div>
+					
+					<div class="modal-body text-center">
+						<form id="submitAddress">
+							<span>Type of contact: </span>
+								
+							<select id="favSel1" required name="selectType1" class="text-left">
+								<option value="family">Family</option>
+								<option value="friends">Friends</option>
+								<option value="love">Love</option>
+								<option value="business">Business</option>
+							</select> &nbsp; &nbsp; Very important? 
+							<select id="favSel2" required name="selectType2">
+								<option value="yes">Yes</option>
+								<option value="no">No</option>
+							</select>
+
+							<br><br>
+								
+							<p>Contact's full name: </p>
+							<input class="inputi" type="text" name="contactsName" required placeholder="Enter a name... "><br><br>
+							<p>E-Mail address: </p>
+							<input class="inputi" type="email" name="contactsEmail" placeholder="A page to memorize... " required><br><br>
+							<p>Telephone number: </p>
+							<input class="inputi" type="tel" name="telephoneNumber" placeholder="Enter your comment... "><br><br>
+							<p>Comment: </p>
+							<input class="inputi" type="text" name="newContactComment" placeholder="Enter your comment... "><br><br>
+							<button id="addUrlBtn" type="submit">Add New</button>
+						</form>
+					</div>
+					
+					<div class="modal-footer">
+						<span id="editMessage11" style="margin-left:15px;color:green;"></span>
+						<button id="closeBtnAddress1" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="editAddress" role="dialog">
+			<div class="modal-dialog">
+
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="Bookmark new URL">Edit contact details</h4>
+					</div>
+					
+					<div class="modal-body text-center">
+						<form id="submitEditedAddress">
+							<span>Type of contact:</span><br>
+								
+							<select id="favSel1" required name="selectType1">
+							<option value="{{editAddress.contact}}" selected ><span style="color:blue;">{{editAddress.contact}}</span></option>
+								<option value="family">Family</option>
+								<option value="friends">Friends</option>
+								<option value="love">Love</option>
+								<option value="business">Business</option>
+							</select>
+							<select id="favSel2" required name="selectType2">
+							<option value="{{editAddress.vip}}" selected ><span style="color:blue;">{{editAddress.vip}}</span></option>
+								<option value="yes">Yes</option>
+								<option value="no">No</option>
+							</select>
+
+							<br><br>
+								
+							<p>Contact's full name: </p>
+							<input class="inputi" type="text" name="contactsName" required placeholder="Enter a name... " value={{editAddress.name}}><br><br>
+							<p>E-Mail address: </p>
+							<input class="inputi" type="email" name="contactsEmail" placeholder="A page to memorize... " required value={{editAddress.email}}><br><br>
+							<p>Telephone number: </p>
+							<input class="inputi" type="tel" name="telephoneNumber" placeholder="Enter your comment... " value={{editAddress.telephone}}><br><br>
+							<p>Comment: </p>
+							<input class="inputi" type="text" name="newContactComment" placeholder="Enter your comment... " value={{editAddress.comment}}><br><br>
+							<button id="editAddressBtn" type="submit">Edit</button>
+						</form>
+						
+					</div>
+					
+					<div class="modal-footer">
+						<span id="editMessage12" style="margin-left:15px;color:green;"></span>
+						<button id="closeBtnAddress2" type="button" class="btn btCOntactn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
 
 <template name="favs">
 	
@@ -1226,8 +877,8 @@
 			{{#each returnFavs}}
 			<ul class="{{returnClass}}" style="list-style-type:none;">
 				<li></li>
-				<li><a href="{{ url }}"> {{title}} </a> {{{ returnType }}}</li>
-				<li><i><span style="font-size:1.2rem;">"{{ comment }}"</span></i> {{#if love}} <i class="fa fa-heart" aria-hidden="true" style="color:red;"></i>{{/if}}</li>
+				<li><a class="favName" href="{{ url }}"> {{title}} </a> {{{ returnType }}}</li>
+				<li><i><span style="font-size:1.7rem;text-shadow:0 1px white;color:black">"{{ comment }}"</span></i> {{#if love}} <i class="fa fa-heart" aria-hidden="true" style="color:red;"></i>{{/if}}</li>
 			</ul>
 			<p style="padding-left:45%;">------</p>
 			{{/each}}
@@ -1237,26 +888,26 @@
 
 	<div class="btn4">
 
-		<a class="links1 showOptions" id="footer4Btn1" href="#"><i class="notesButtons fa2 fa sound fa-wrench fa-3x" aria-hidden="true" style="margin-left:3%;"></i></a>
-		<a class="links1 hideOptions" id="footer4Btn2" href="#"><i class="fa fa2 sound fa-arrow-right fa-3x" aria-hidden="true" style="margin-left:3%;"></i></a>
+		<a class="links1 showOptions" id="footer4Btn1" href="#/"><i class="notesButtons fa2 fa sound fa-wrench fa-3x" aria-hidden="true" style="margin-left:7%;"></i></a>
+		<a class="links1 hidden hideOptions" id="footer4Btn2" href="#/"><i class="fa fa2 sound fa-arrow-right fa-3x" aria-hidden="true" style="margin-left:7%;"></i></a>
 		{{#unless returnClass}}
-		<a href="#" id="footer4Btn3" data-toggle="modal" data-target="#editModal"><i class="notesButtons fa2 sound fa fa fa-pencil-square fa-3x" aria-hidden="true"></i></a>
+		<a href="#/" id="footer4Btn3" data-toggle="modal" data-target="#editModal"><i class="notesButtons fa2 sound fa fa fa-pencil-square fa-3x" aria-hidden="true"></i></a>
 		
-		<a class="links1" id="footer4Btn5" href="#"><i class="notesButtons fa2 sound fa fa-heart-o fa-3x" aria-hidden="true" style="margin-left:12%"></i></a>
-		<a class="links1" id="footer4Btn7" href="#"><i class="notesButtons fa2 sound fa fa-eye-slash fa-3x" aria-hidden="true"></i></a>
-		<a class="links1" id="footer4Btn6" href="#"><i class="notesButtons fa2 sound fa fa-trash fa-3x" aria-hidden="true" ></i></a>
+		<a class="links1" id="footer4Btn5" href="#/"><i class="notesButtons fa2 sound fa fa-heart-o fa-3x" aria-hidden="true" style="margin-left:10%"></i></a>
+		<a class="links1" id="footer4Btn7" href="#/"><i class="notesButtons fa2 sound fa fa-eye-slash fa-3x" aria-hidden="true"></i></a>
+		<a class="links1" id="footer4Btn6" href="#/"><i class="notesButtons fa2 sound fa fa-trash fa-3x" aria-hidden="true" ></i></a>
 				
 		{{else}}
-		<a href="#" id="footer4Btn4" data-toggle="modal" data-target="#myModal"><i class="notesButtons sound fa2 fa fa-floppy-o fa-3x" aria-hidden="true"></i></a>
-		<a class="links1 hidden2" id="footer4Btn5" href="#"><i class="notesButtons fa2 sound fa fa-heart-o fa-3x" aria-hidden="true" style="margin-left:12%"></i></a>
-		<a class="links1 hidden2" id="footer4Btn7" href="#"><i class="notesButtons fa2 sound fa fa-eye-slash fa-3x" aria-hidden="true"></i></a>
-		<a class="links1 hidden2" id="footer4Btn6" href="#"><i class="notesButtons fa2 sound fa fa-trash fa-3x" aria-hidden="true" ></i></a>
+		<a href="#/" id="footer4Btn4" data-toggle="modal" data-target="#myModal"><i class="notesButtons sound fa2 fa fa-floppy-o fa-3x" aria-hidden="true"></i></a>
+
+		<a class="links1 hidden2" id="footer4Btn5" href="#/"><i class="notesButtons fa2 sound fa fa-heart-o fa-3x" aria-hidden="true" style="margin-left:10%"></i></a>
+		<a class="links1 hidden2" id="footer4Btn7" href="#/"><i class="notesButtons fa2 sound fa fa-eye-slash fa-3x" aria-hidden="true"></i></a>
+		<a class="links1 hidden2" id="footer4Btn6" href="#/"><i class="notesButtons fa2 sound fa fa-trash fa-3x" aria-hidden="true" ></i></a>
 		
 		{{/unless}}
 
-		<a class="links1" id="footer4Btn8" href="#"><i class="footerBtn fa fa2 sound fa-info fa-3x" aria-hidden="true" style="margin-left:20%;"></i></a>
-		<a class="links1 hidden" id="footer4Btn9" href="#"><i class="fa fa2 fa-arrow-left fa-3x" aria-hidden="true" style="margin-left:20%;"></i></a>
-			
+		<a class="links1 showInfo" id="footer4Btn8" href="#/"><i class="notesButtons fa fa2 sound fa-info fa-3x" aria-hidden="true" style="margin-left:24%;"></i></a>
+		<a class="links1 hideInfo hidden" id="footer4Btn9" href="#/"><i class="fa fa2 fa-arrow-left fa-3x" aria-hidden="true" style="margin-left:20%;"></i></a>
 	</div>
 	
 	<div id="formFavourites">
@@ -1274,8 +925,8 @@
 						<form id="submitUrl">
 							<span>Type of bookmark:</span><br>
 								
-							<select required name="selectType">
-								<option value="news">Education</option>
+							<select id="favSel" required name="selectType">
+								<option value="education">Education</option>
 								<option value="movies">Movies</option>
 								<option value="music">Music</option>
 								<option value="news">News</option>
@@ -1293,15 +944,13 @@
 							<input class="inputi" type="text" name="newUrlComment" placeholder="Enter your comment... "><br><br>
 							<button id="addUrlBtn" type="submit">Add New</button>
 						</form>
-							
 					</div>
 					
 					<div class="modal-footer">
 						<span id="editMessage1" style="margin-left:15px;color:green;"></span>
-						<button id="closeBtn" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button id="closeBtnAddress1" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
 				</div>
-
 			</div>
 		</div>
 
@@ -1317,10 +966,9 @@
 					<div class="modal-body text-center">
 						<form id="submitEditedUrl">
 							<span>Type of bookmark: </span><br>
-								
 							<select required name="selectType" class="sel">
 								<option value="{{editBookmark.type}}" selected ><span style="color:blue;">{{editBookmark.type}}</span></option>
-								<option value="work">Education</option>
+								<option value="education">Education</option>
 								<option value="movies">Movies</option>
 								<option value="music">Music</option>
 								<option value="news">News</option>
@@ -1339,18 +987,13 @@
 							<input class="inputi" type="text" name="newUrlComment" placeholeder="Enter your comment... " value={{editBookmark.comment}}><br><br>
 							<button id="editUrlBtn" type="submit">Edit Detail</button>
 						</form>
-							
 					</div>
-					
 					<div class="modal-footer">
 						<span id="editMessage2" style="margin-left:15px;color:green;"></span>
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button id="closeBtnAddress2" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
 		</div>		
 	</div>
-	
-
-
 </template>

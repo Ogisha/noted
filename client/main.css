@@ -1,7 +1,17 @@
 body {
 	font-family: "Times New Roman";
 	font-size: 18px;
+	background: rgba(0,0,255, .5) ;
+
 }
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
 
 .btn-group-vertical > .btn,
 .btn-group-vertical > .btn-group,
@@ -14,8 +24,9 @@ body {
 	opacity: .75;
 }
 
-select {
-	width: 60%;
+.proceedBtn {
+	margin-left: 2.5%;
+	margin-right: 2.5%;
 }
 
 #section2 {
@@ -42,6 +53,14 @@ select {
 	display: inline-block;
 	float: right;
 	width: 50%;
+}
+
+#confirmDbChangeBtn {
+	margin-top: 5%;
+	margin-left: 20%;
+	font-size: 1em;
+	padding: 5%;
+	width: 60%;
 }
 
 #submitSound, #resetSoundChangeBtn {
@@ -179,7 +198,11 @@ hr {
 	width: 50%;
 }
 
-.btn4 {
+.btn2 {
+	margin-bottom: 2%;
+}
+
+.btn4, .btn3 {
 	padding-top: 2%;
 	padding-bottom: 3%;
 }
@@ -277,14 +300,18 @@ th a:visited {
 	padding-top: .25em;
 }
 
+.jq-small1 {
+	margin-left: 28%;
+}
+
 #ni4 {
-	padding-left: 22%;
+	padding-left: 14%;
 	padding-bottom: 5%;
 }
 
 .buttons {
-	padding-top: 2%;
-	padding-bottom: .75%;
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
 }
 
 #note, .notesList {
@@ -295,31 +322,32 @@ th a:visited {
 .addressbook {
 	background: url(images/contacts.jpeg);
 	background-size: cover;
-	height: 54vh;
+	height: 49vh;
 	width: 94%;
 	margin-left: 3%;
 	border: 3px solid #666;
 	border-radius: 8px;
-	overflow: scroll;
+	overflow: auto;
 }
-/*
-.noteslist, .addressbook {
-	background-size:cover;
+
+.noteslist{
+	background: url(images/noteslist.jpg);
+	background-size:100% 100%;
 	position: relative;
 	font-family: verdana;
 	text-align: left;
-	
 	border-left: none;
 	border-right: none;
 	border-radius: 16px;
 	margin-top: 0%;
 	margin-bottom: 2%;
 	border: 3px ridge #666;
-	overflow: auto;
-	padding-left: 20%;
-	padding-right: 4%;
+	overflow: scroll;
+	padding-left: 5%;
+	padding-right: 5%;
+	height:49vh;
 }
-*/
+
 .social, .logoImage {
 	padding-top: 5%;
 	padding-bottom: 5%;
@@ -332,9 +360,10 @@ th a:visited {
 .cpP {
 	color: orange;
 	font-weight: 600;
-	font-size: 2.4rem;
+	font-size: 2.65rem;
 	letter-spacing: .15em;
-	line-height: .65em;
+	line-height: .75em;
+	text-shadow: 1px 1px black;
 }
 
 .onlyText {
@@ -346,7 +375,7 @@ th a:visited {
 }
 
 .notesButtons1 {
-	padding-left: 3%;
+	/*padding-left: 3%;*/
 	padding-bottom: 2.5%;
 }
 
@@ -391,19 +420,20 @@ th a:visited {
 }
 
 .favourites {
+	background: url(images/favBack.jpg);
+	background-size: cover;
 	position: relative;
 	font-family: verdana;
 	padding: 2% 5% 2% 5%;
 	text-align: left;
-	background: white;
 	border: 3px ridge brown;
 	border-left: none;
 	border-right: none;
 	border-radius: 16px;
-	margin-left: .5%;
-	margin-top: 5%;
+	margin-left: 3%;
+	margin-top: 3%;
 	width: 94%;
-	height: 50vh;
+	height: 49vh;
 	overflow: auto;
 }
 
@@ -422,7 +452,7 @@ h4 {
 }
 
 .yellow {
-	background: yellow;
+	background: rgba(100,149,237,.6);
 }
 
 .favPar {
@@ -436,16 +466,11 @@ h4 {
 }
 
 .selected {
-	background: yellow;
+	background: rgba(100,149,237,.6);
 }
 
 .hidden2 {
 	visibility: hidden;
-}
-
-.favourites {
-	background: url(images/favBackground.jpg);
-	background-size:cover;
 }
 
 .fa2:hover {
@@ -469,6 +494,10 @@ h4 {
 .div1 .comm3 {
 	width: 90%;
 	padding-top: 0;
+}
+
+.selectedAddress {
+	border: 4px solid red;
 }
 
 .comm4 {
@@ -529,6 +558,13 @@ h4 {
 .noteslist ul li {
 	margin-top: 2.5%;
 }
+
+.favName {
+	background: rgba(240,255,255, .2);
+	color: blue;
+	text-shadow: 1px 2px white;
+	border-radius: 12px;
+}
 	
 .selected2 {
 	font-weight:600;
@@ -550,8 +586,8 @@ h4 {
 	font-family: monospace;
 }
 	
-.inputi {
-	border: "1px solid grey"
+.inputi:hover{
+	border: "2px solid grey";
 }
 
 .modal-body {
