@@ -54,11 +54,11 @@
 						<div id="dugmad1" class="{{isLogedIn}}">
 						{{#if currentUser}}
 							<a class="links1 showOptions hidden-xs hidden-sm" id="footerBtn1" href="#/"><i class="notesButtons fa2 fa sound fa-wrench fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:3%;"></i></a>
-							<a class="links1 hideOptions hidden hidden-xs hidden-sm" id="footerBtn2" href="#/"><i class="fa fa2 fa-arrow-right fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:3%;"></i></a>
+							<a class="links1 hideOptions hidden hidden-xs hidden-sm" id="footerBtn2" href="#/"><i class="fa fa2 fa-arrow-right fa-3x jq-mouseleave sound" aria-hidden="true" style="margin-left:3%;"></i></a>
 							<a class="links1" id="footerBtn3" href="#/"><i class="jq-small1 notesButtons fa2 fa fa-floppy-o fa-3x jq-mouseleave" aria-hidden="true"></i></a>
 							<a class="links1" id="footerBtn4" href="#/"><i class="jq-small2 notesButtons fa2 fa sound fa-trash fa-3x jq-mouseleave" aria-hidden="true"></i></a>
 							<a class="links1 showInfo hidden-xs hidden-sm" id="footerBtn5" href="#/"><i class="footerBtn fa fa2 sound fa-info fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:27%;"></i></a>
-							<a class="links1 hideInfo hidden hidden-xs hidden-sm" id="footerBtn6" href="#/"><i class="footerBtn fa fa2 fa-arrow-left fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:24%;"></i></a>
+							<a class="links1 hideInfo hidden hidden-xs hidden-sm" id="footerBtn6" href="#/"><i class="footerBtn fa fa2 fa-arrow-left fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:25%;"></i></a>
 							{{/if}}
 						</div>
 
@@ -288,10 +288,13 @@
 
 <script>
 
+
+
+
 	$(document).ready(function() {
-		$("#ni1").append(dan);
-			$("#ni2").append(datum);
-			$(".pin").fadeOut();
+			
+
+			$(".pin").fadeOut(); 
 		$(window).on("resize", function() {
 			if ($(window).width() < 992) {
 			$("#section1, #section3").css("background", "url(images/sea.jpg)");
@@ -315,7 +318,7 @@
 		}
 		
 
-	})
+	});
 
 
 		
@@ -441,94 +444,6 @@
 				clearInterval(x);
 		});
 
-		//    /4./    //
-
-		$("body").on("mouseenter", "#footer4Btn1", function() {
-			typing(splitText7);
-		}).on("mouseleave", "#footer4Btn1", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-
-		$("body").on("mouseenter", "#footer4Btn2", function() {
-			typing(splitText8);
-		}).on("mouseleave", "#footer4Btn2", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-
-		$("body").on("mouseenter", "#footer4Btn3", function() {
-			typing(splitText18);
-		}).on("mouseleave", "#footer4Btn3", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-
-		$("body").on("mouseenter", "#footer4Btn4", function() {
-			typing(splitText19);
-		}).on("mouseleave", "#footer4Btn4", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-
-		$("body").on("mouseenter", "#footer4Btn5", function() {
-			typing(splitText20);
-		}).on("mouseleave", "#footer4Btn5", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-
-		$("body").on("mouseenter", "#footer4Btn6", function() {
-			typing(splitText21);
-		}).on("mouseleave", "#footer4Btn6", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-
-		$("body").on("mouseenter", "#footer4Btn7", function() {
-			typing(splitText22);
-		}).on("mouseleave", "#footer4Btn7", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-
-		$("body").on("mouseenter", "#footer4Btn8", function() {
-			typing(splitText11);
-		}).on("mouseleave", "#footer4Btn8", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-
-		$("body").on("mouseenter", "#footer4Btn9", function() {
-			typing(splitText12);
-		}).on("mouseleave", "#footer4Btn9", function() {
-				$(".textInput").text("TASK: ");
-				clearInterval(x);
-		});
-
-
-	
-
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-		
 		
 		$("#noteBtn1").on("mouseenter", function() {
 			typing(splitText5);
@@ -655,6 +570,8 @@
 	},10);
 }
 
+
+
 	</script>
 
 </body>
@@ -686,7 +603,7 @@
 
 	<div class="btn2">
 		<a class="links1 showOptions" id="footer2Btn1" href="#/"><i class="notesButtons fa2 fa sound fa-wrench fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:5%;"></i></a>
-		<a class="links1 hideOptions hidden" id="footer2Btn2" href="#/"><i class="fa fa2 fa-arrow-right fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:5%;"></i></a>
+		<a class="links1 hideOptions hidden" id="footer2Btn2" href="#/"><i class="fa fa2 fa-arrow-right sound fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:5%;"></i></a>
 				
 		{{#unless selected}}
 		<a id="noteslistBtn1" class="links1" href="#/"><i class="notesButtons fa2 fa fa-trash sound fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:17%"></i></a>
@@ -727,13 +644,13 @@
 					{{else}}
 					<span class="commentInput"></span>
 					{{/if}}
-					<a href="#/"><span class="comm4 glyphicon glyphicon-comment sound" style="margin-top:1%"></span></a>
+					<a href="#/"><span class="comm4 glyphicon glyphicon-comment sound jq-mouseleave" style="margin-top:1%"></span></a>
 					<form id="addressbookComment" class="hidden">
 						<div class="div2">
-							<button type="submit" class="clicked" style="background:transparent;border:none;"><img class="comm5" src="images/saved.png" style="margin-top:45%;"></button>
+							<button type="submit" class="clicked sound jq-mouseleave" style="background:transparent;border:none;"><img class="comm5 " src="images/saved.png" style="margin-top:45%;"></button>
 						</div>
 						<div class="div1">
-							<a href="#/"><img class="comm6" src="images/delete.png" style="margin-top:1%"></a>
+							<a href="#/"><img class="comm6 jq-mouseleave sound" src="images/delete.png" style="margin-top:1%;"></a>
 							<input type="text" class="comm3 contactComment" name="commentBox" placeholder="Enter your comment regarding this contact..." value="{{returnComment.comment}}">
 						</div>
 					</form>
@@ -749,22 +666,22 @@
 	</div>
 	
 	<div class="btn3">
-		<a class="links1 showOptions" id="footer4Btn1" href="#/"><i class="notesButtons fa2 fa sound fa-wrench fa-3x" aria-hidden="true" style="margin-left:7%;"></i></a>
-		<a class="links1 hideOptions hidden" id="footer4Btn2" href="#/"><i class="fa fa2 fa-arrow-right fa-3x" aria-hidden="true" style="margin-left:7%;"></i></a>
+		<a class="links1 showOptions" id="footer4Btn1" href="#/"><i class="notesButtons fa2 fa sound fa-wrench fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:7%;"></i></a>
+		<a class="links1 hideOptions hidden" id="footer4Btn2" href="#/"><i class="fa fa2 fa-arrow-right fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:7%;"></i></a>
 
 		{{#unless returnAddressClass}}
-		<a href="#/" data-toggle="modal" data-target="#editAddress" id="footer4Btn4"><i class="notesButtons fa2 sound fa fa fa-pencil-square fa-3x" aria-hidden="true"></i></a>
-		<a class="links1" href="#/" id="footer4Btn5"><i class="notesButtons fa2 fa fa-trash fa-3x sound" aria-hidden="true" style="margin-left:14%;" id="footer4Btn6"></i></a>
-		<a class="links1" id="footer4Btn7" href="#/"><i class="notesButtons fa2 fa fa-eye-slash fa-3x " aria-hidden="true"></i></a>
+		<a href="#/" data-toggle="modal" data-target="#editAddress" id="footer4Btn4"><i class="notesButtons fa2 sound fa fa fa-pencil-square fa-3x jq-mouseleave" aria-hidden="true"></i></a>
+		<a class="links1" href="#/" id="footer4Btn5"><i class="notesButtons fa2 fa fa-trash fa-3x sound jq-mouseleave" aria-hidden="true" style="margin-left:14%;"></i></a>
+		<a class="links1" id="footer4Btn6" href="#/"><i class="notesButtons fa2 fa fa-eye-slash sound fa-3x jq-mouseleave" aria-hidden="true"></i></a>
 				
 		{{else}}
-		<a href="#/" data-toggle="modal" data-target="#newAddress"><i class="notesButtons fa2 fa sound fa-floppy-o fa-3x" aria-hidden="true"></i></a>
+		<a href="#/" data-toggle="modal" data-target="#newAddress" id="footer4Btn3"><i class="notesButtons fa2 fa sound fa-floppy-o fa-3x jq-mouseleave" aria-hidden="true"></i></a>
 		<a class="links1 hidden2" id="trashFavButton" href="#/"><i class="notesButtons fa2 fa fa-trash fa-3x sound hidden2" aria-hidden="true" style="margin-left:14%;"></i></a>
 		<a class="links1 hidden2" id="deselect" href="#/"><i class="notesButtons fa2 fa fa-eye-slash fa-3x sound hidden2" aria-hidden="true"></i></a>
 		
 		{{/unless}}
-		<a class="links1 showInfo" id="footer4Btn5" href="#/"><i class="footerBtn fa fa2 sound fa-info fa-3x" aria-hidden="true" style="margin-left:28%;"></i></a>
-		<a class="links1 hideInfo hidden" id="footer4Btn6" href="#/"><i class="fa fa2 fa-arrow-left fa-3x" aria-hidden="true" style="margin-left:26%;"></i></a>
+		<a class="links1 showInfo" id="footer4Btn7" href="#/"><i class="footerBtn fa fa2 sound fa-info fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:28%;"></i></a>
+		<a class="links1 hideInfo hidden" id="footer4Btn8" href="#/"><i class="fa fa2 fa-arrow-left fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:26%;"></i></a>
 	</div>
 
 	<div id="addressFavourites">
@@ -826,15 +743,14 @@
 					
 					<div class="modal-body text-center">
 						<form id="submitEditedAddress">
-							<span>Type of contact:</span><br>
-								
+							<span>Type of contact:</span>
 							<select id="favSel1" required name="selectType1">
 							<option value="{{editAddress.contact}}" selected ><span style="color:blue;">{{editAddress.contact}}</span></option>
 								<option value="family">Family</option>
 								<option value="friends">Friends</option>
 								<option value="love">Love</option>
 								<option value="business">Business</option>
-							</select>
+							</select> &nbsp; &nbsp; Very important?
 							<select id="favSel2" required name="selectType2">
 							<option value="{{editAddress.vip}}" selected ><span style="color:blue;">{{editAddress.vip}}</span></option>
 								<option value="yes">Yes</option>
@@ -888,17 +804,17 @@
 
 	<div class="btn4">
 
-		<a class="links1 showOptions" id="footer4Btn1" href="#/"><i class="notesButtons fa2 fa sound fa-wrench fa-3x" aria-hidden="true" style="margin-left:7%;"></i></a>
-		<a class="links1 hidden hideOptions" id="footer4Btn2" href="#/"><i class="fa fa2 sound fa-arrow-right fa-3x" aria-hidden="true" style="margin-left:7%;"></i></a>
+		<a class="links1 showOptions" id="footer4Btn1" href="#/"><i class="notesButtons fa2 fa sound fa-wrench fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:7%;"></i></a>
+		<a class="links1 hidden hideOptions" id="footer4Btn2" href="#/"><i class="fa fa2 sound fa-arrow-right fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:7%;"></i></a>
 		{{#unless returnClass}}
-		<a href="#/" id="footer4Btn3" data-toggle="modal" data-target="#editModal"><i class="notesButtons fa2 sound fa fa fa-pencil-square fa-3x" aria-hidden="true"></i></a>
+		<a href="#/" id="footer4Btn3" data-toggle="modal" data-target="#editModal"><i class="notesButtons fa2 sound fa fa fa-pencil-square fa-3x jq-mouseleave" aria-hidden="true"></i></a>
 		
-		<a class="links1" id="footer4Btn5" href="#/"><i class="notesButtons fa2 sound fa fa-heart-o fa-3x" aria-hidden="true" style="margin-left:10%"></i></a>
-		<a class="links1" id="footer4Btn7" href="#/"><i class="notesButtons fa2 sound fa fa-eye-slash fa-3x" aria-hidden="true"></i></a>
-		<a class="links1" id="footer4Btn6" href="#/"><i class="notesButtons fa2 sound fa fa-trash fa-3x" aria-hidden="true" ></i></a>
+		<a class="links1" id="footer4Btn5" href="#/"><i class="notesButtons fa2 sound fa fa-heart-o fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:10%"></i></a>
+		<a class="links1" id="footer4Btn7" href="#/"><i class="notesButtons fa2 sound fa fa-eye-slash fa-3x jq-mouseleave" aria-hidden="true"></i></a>
+		<a class="links1" id="footer4Btn6" href="#/"><i class="notesButtons fa2 sound fa fa-trash fa-3x jq-mouseleave" aria-hidden="true" ></i></a>
 				
 		{{else}}
-		<a href="#/" id="footer4Btn4" data-toggle="modal" data-target="#myModal"><i class="notesButtons sound fa2 fa fa-floppy-o fa-3x" aria-hidden="true"></i></a>
+		<a href="#/" id="footer4Btn4" data-toggle="modal" data-target="#myModal"><i class="notesButtons sound fa2 fa fa-floppy-o fa-3x jq-mouseleave" aria-hidden="true"></i></a>
 
 		<a class="links1 hidden2" id="footer4Btn5" href="#/"><i class="notesButtons fa2 sound fa fa-heart-o fa-3x" aria-hidden="true" style="margin-left:10%"></i></a>
 		<a class="links1 hidden2" id="footer4Btn7" href="#/"><i class="notesButtons fa2 sound fa fa-eye-slash fa-3x" aria-hidden="true"></i></a>
@@ -906,8 +822,8 @@
 		
 		{{/unless}}
 
-		<a class="links1 showInfo" id="footer4Btn8" href="#/"><i class="notesButtons fa fa2 sound fa-info fa-3x" aria-hidden="true" style="margin-left:24%;"></i></a>
-		<a class="links1 hideInfo hidden" id="footer4Btn9" href="#/"><i class="fa fa2 fa-arrow-left fa-3x" aria-hidden="true" style="margin-left:20%;"></i></a>
+		<a class="links1 showInfo" id="footer4Btn8" href="#/"><i class="notesButtons fa fa2 sound fa-info jq-mouseleave fa-3x" aria-hidden="true" style="margin-left:24%;"></i></a>
+		<a class="links1 hideInfo hidden" id="footer4Btn9" href="#/"><i class="fa fa2 fa-arrow-left fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:20%;"></i></a>
 	</div>
 	
 	<div id="formFavourites">

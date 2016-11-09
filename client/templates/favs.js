@@ -1,3 +1,29 @@
+var favText1 = "Manage settings"; var favSplitText1 = favText1.split("");
+var favText2 = "Collapse settings"; var favSplitText2 = favText2.split("");
+var favText3 = "Save new URL"; var favSplitText3 = favText3.split("");
+var favText4 = "Edit this URL"; var favSplitText4 = favText4.split("");
+var favText5 = "Toggle loved status"; var favSplitText5 = favText5.split("");
+var favText6 = "Delete URL"; var favSplitText6 = favText6.split("");
+var favText7 = "Deselect";  var favSplitText7 = favText7.split("");
+var favText8 = "Show info";  var favSplitText8 = favText8.split("");
+var favText9 = "Collapse section";  var favSplitText9 = favText9.split("");
+
+var x1 = 0;
+		
+function typing(splitText) {
+			
+	var br = 0;
+	x1 = setInterval(function() {
+		$(".textInput").append(splitText[br]);
+		br++;
+
+		if (splitText.length == br)
+			clearInterval(x1);
+	},10);
+}
+
+
+
 Template.favs.helpers({
 	
 	"check": function() {
@@ -119,5 +145,55 @@ Template.favs.events({
 
 	"click #closeBtn2":function() {
 		$("#editMessage2").text("");
+	},
+
+	"mouseleave .jq-mouseleave":function() {
+		$(".textInput").text("TASK: ");
+		clearInterval(x1);
+	},
+		
+	"mouseenter #footer4Btn1": function(event) {
+		clearInterval(x);
+		typing(favSplitText1);
+	},
+
+	"mouseenter #footer4Btn2": function(event) {
+		clearInterval(x);
+		typing(favSplitText2);
+	},
+
+	"mouseenter #footer4Btn3": function(event) {
+		clearInterval(x1);
+		typing(favSplitText4);
+	},
+
+	"mouseenter #footer4Btn4": function(event) {
+		clearInterval(x1);
+		typing(favSplitText3);
+	},
+
+	"mouseenter #footer4Btn5": function(event) {
+		clearInterval(x1);
+		typing(favSplitText5);
+	},
+
+	"mouseenter #footer4Btn6": function(event) {
+		clearInterval(x1);
+		typing(favSplitText6);
+	},
+		
+	"mouseenter #footer4Btn7": function(event) {
+		clearInterval(x1);
+		typing(favSplitText7);
+	},
+
+	"mouseenter #footer4Btn8": function(event) {
+		clearInterval(x1);
+		typing(favSplitText8);
+	},
+
+	"mouseenter #footer4Btn9": function(event) {
+		clearInterval(x1);
+		typing(favSplitText9);
 	}
 });
