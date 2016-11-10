@@ -28,7 +28,7 @@ Template.addressbook.helpers({
 
 	"returnAll": function() {
 		
-		return Addresses.find({}, { sort: { name: 1}});
+		return Addresses.find({ createdBy: Meteor.userId() }, { sort: { name: 1}});
 	},
 
 	"editCheck": function() {
@@ -128,7 +128,7 @@ Template.addressbook.events({
 		var email = event.target.contactsEmail.value;
 		var telNum = event.target.telephoneNumber.value;
 		var comment = event.target.newContactComment.value;
-		Addresses.insert({ contact: typeAdd, vip: vip, name: fullName, email: email, telephone: telNum, comment: comment});
+		Addresses.insert({ createdBy: Meteor.userId(), contact: typeAdd, vip: vip, name: fullName, email: email, telephone: telNum, comment: comment});
 		$("#editMessage11").append("Successfuly added!");
 		event.target.selectType1.value = "";
 		event.target.selectType2.value = "";
@@ -148,7 +148,7 @@ Template.addressbook.events({
 		var email = event.target.contactsEmail.value;
 		var telNum = event.target.telephoneNumber.value;
 		var comment = event.target.newContactComment.value;
-		Addresses.update({ _id:temp},  { contact: typeAdd, vip: vip, name: fullName, email: email, telephone: telNum, comment: comment});
+		Addresses.update({ _id:temp},  { createdBy: Meteor.userId(), contact: typeAdd, vip: vip, name: fullName, email: email, telephone: telNum, comment: comment});
 		$("#editMessage12").append("Successfuly edited!");
 	},
 	
@@ -166,11 +166,11 @@ Template.addressbook.events({
 		$("#editMessage12").text("");
 	},
 
-	"click #footer4Btn5": function() {
+	"click #footer3Btn5": function() {
 		Addresses.remove({ _id: Session.get("address")});
 	},
 
-	"click #footer4Btn6": function() {
+	"click #footer3Btn6": function() {
 		Session.set("address", null)
 	},
 
@@ -179,42 +179,42 @@ Template.addressbook.events({
 		clearInterval(x1);
 	},
 		
-	"mouseenter #footer4Btn1": function(event) {
+	"mouseenter #footer3Btn1": function(event) {
 		clearInterval(x);
 		typing(splitText11);
 	},
 
-	"mouseenter #footer4Btn2": function(event) {
+	"mouseenter #footer3Btn2": function(event) {
 		clearInterval(x);
 		typing(splitText22);
 	},
 
-	"mouseenter #footer4Btn3": function(event) {
+	"mouseenter #footer3Btn3": function(event) {
 		clearInterval(x1);
 		typing(splitText33);
 	},
 
-	"mouseenter #footer4Btn4": function(event) {
+	"mouseenter #footer3Btn4": function(event) {
 		clearInterval(x1);
 		typing(splitText44);
 	},
 
-	"mouseenter #footer4Btn5": function(event) {
+	"mouseenter #footer3Btn5": function(event) {
 		clearInterval(x1);
 		typing(splitText55);
 	},
 
-	"mouseenter #footer4Btn6": function(event) {
+	"mouseenter #footer3Btn6": function(event) {
 		clearInterval(x1);
 		typing(splitText66);
 	},
 		
-	"mouseenter #footer4Btn7": function(event) {
+	"mouseenter #footer3Btn7": function(event) {
 		clearInterval(x1);
 		typing(splitText77);
 	},
 
-	"mouseenter #footer4Btn8": function(event) {
+	"mouseenter #footer3Btn8": function(event) {
 		clearInterval(x1);
 		typing(splitText88);
 	},

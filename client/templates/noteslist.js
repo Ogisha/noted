@@ -51,18 +51,16 @@ Template.notebook.events({
 	
 	"click #noteslistBtn1": function() {
 		var temp = Session.get("selected");
-		NotesList.remove({ _id: temp });
+		NotesList.remove({ _id: temp});
 	},
 	
 	"click #noteslistBtn2": function() {
 		var temp = Session.get("selected");
-		NotesList.update({ _id: temp}, { $set: { viewed: true } });
+		NotesList.update({ _id: temp }, { $set: { viewed: true } });
 		return "successfuly edited!";
 	},
 	
 	"click #noteslistBtn3":function() {
 		Session.set("selected", null);
-	}
-
-	
+	}	
 });

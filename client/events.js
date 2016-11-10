@@ -127,7 +127,7 @@ Template.body.events({
 	"click .showInfo": function(event) {
 		$(".hideInfo").removeClass("hidden");
 		$(".showInfo").addClass("hidden");
-		$("#section3").css("position", "absolute").animate({top: "0"}, 500).slideDown();
+		$("#section3").removeClass("hidden").css("position", "absolute").animate({top: "0"}, 500).slideDown();
 	},
 
 	"click .hideInfo": function(event) {

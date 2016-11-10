@@ -2,8 +2,8 @@ body {
 	font-family: "Times New Roman";
 	font-size: 18px;
 	background: rgba(0,0,255, .5) ;
-
 }
+
 a:hover {
 	text-decoration: none;
 }
@@ -11,7 +11,6 @@ a:hover {
 a:active {
 	text-decoration: none;
 }
-
 
 .btn-group-vertical > .btn,
 .btn-group-vertical > .btn-group,
@@ -67,6 +66,12 @@ a:active {
 	width: 60%;
 }
 
+#welcome-close {
+	margin-top: 2.5%;
+	width:40%;
+	margin-left:30%;
+}
+
 #submitSound, #resetSoundChangeBtn {
 	font-size: 1.65rem;
 	width: 60%;
@@ -75,6 +80,10 @@ a:active {
 	margin-top: 1%;
 	margin-bottom: 3%;
 	border-radius: 8px;
+}
+
+#welcome-modal {
+	background: url(images/welcome_modal.png);
 }
 
 #sideDivLeft p {
@@ -520,8 +529,6 @@ h4 {
 
 .table-bordered th {
 	padding: 2.5% 2% 2.5% 2%
-
-
 }
 
 .contactComment {

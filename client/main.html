@@ -188,7 +188,7 @@
 
 		<div class="clearfix visible-md-inline-block"></div>
 
-		<div id="section3" class="col-sm-6 col-md-3 col-md-offset-9 col-sm-push-right-3">
+		<div id="section3" class="col-sm-6 col-md-3 col-md-offset-9 col-sm-push-right-3 hidden">
 				
 			<div id="sideDivRight" class="text-center">
 				<h4 class="text-center"><em>NOTED!</em></h4> 
@@ -283,8 +283,30 @@
 </div>
 </div>
 
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+
+<div id="welcome" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body" id="welcome-modal">
+        <h4 class="text-center" style="margin-bottom:4%">Welcome to the early test build of NOTED! :-)</h4>
+        	<p>Just a few line from us, to get you started:</p>
+        	<p>You're more than welcome to create your private user account (and have your own personalized lists), but since this is just a test phase, and you can expect some database downtimes (resets, even), you can fool around and test the overall functionality by using the guest account ;-)</p>
+
+        	<p>To log in as guest, please use the following information:</p>
+        	<code>username: guest@notedsoft.com
+        	password: testtest</code>
+
+        <button type="button" id="welcome-close" class="btn btn-default" data-dismiss="modal">All clear, let's go!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <audio id="sounds"></audio>
 <audio id="sounds1"></audio>
+
 
 <script>
 
@@ -361,12 +383,6 @@
 		$("#fontsBtn6").on("click", function() {
 			$("textarea").css("font-family", "Monospace");
 		});
-
-/*
-		$("#tempBtn").on("click", function() {
-			if ($("#fontSettings").hasClass("in"))
-				$("#fontfamily, #fontsize").attr("class", "btn-group-vertical collapse");
-		});*/
 
 		$("#fontsizeBtn").on("click", function() {
 			$("#fontfamily").attr("class", "btn-group-vertical collapse");
@@ -570,7 +586,15 @@
 	},10);
 }
 
-
+$(window).load(function() {
+	if (Meteor.user())
+		alert("yes");
+	else {
+		setTimeout(function() {
+			$("#welcome").modal("show");
+		}, 3000);
+	}
+});
 
 	</script>
 
@@ -666,22 +690,22 @@
 	</div>
 	
 	<div class="btn3">
-		<a class="links1 showOptions" id="footer4Btn1" href="#/"><i class="notesButtons fa2 fa sound fa-wrench fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:7%;"></i></a>
-		<a class="links1 hideOptions hidden" id="footer4Btn2" href="#/"><i class="fa fa2 fa-arrow-right fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:7%;"></i></a>
+		<a class="links1 showOptions" id="footer3Btn1" href="#/"><i class="notesButtons fa2 fa sound fa-wrench fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:7%;"></i></a>
+		<a class="links1 hideOptions hidden" id="footer3Btn2" href="#/"><i class="fa fa2 fa-arrow-right fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:7%;"></i></a>
 
 		{{#unless returnAddressClass}}
-		<a href="#/" data-toggle="modal" data-target="#editAddress" id="footer4Btn4"><i class="notesButtons fa2 sound fa fa fa-pencil-square fa-3x jq-mouseleave" aria-hidden="true"></i></a>
-		<a class="links1" href="#/" id="footer4Btn5"><i class="notesButtons fa2 fa fa-trash fa-3x sound jq-mouseleave" aria-hidden="true" style="margin-left:14%;"></i></a>
-		<a class="links1" id="footer4Btn6" href="#/"><i class="notesButtons fa2 fa fa-eye-slash sound fa-3x jq-mouseleave" aria-hidden="true"></i></a>
+		<a href="#/" data-toggle="modal" data-target="#editAddress" id="footer3Btn4"><i class="notesButtons fa2 sound fa fa fa-pencil-square fa-3x jq-mouseleave" aria-hidden="true"></i></a>
+		<a class="links1" href="#/" id="footer3Btn5"><i class="notesButtons fa2 fa fa-trash fa-3x sound jq-mouseleave" aria-hidden="true" style="margin-left:14%;"></i></a>
+		<a class="links1" id="footer3Btn6" href="#/"><i class="notesButtons fa2 fa fa-eye-slash sound fa-3x jq-mouseleave" aria-hidden="true"></i></a>
 				
 		{{else}}
-		<a href="#/" data-toggle="modal" data-target="#newAddress" id="footer4Btn3"><i class="notesButtons fa2 fa sound fa-floppy-o fa-3x jq-mouseleave" aria-hidden="true"></i></a>
+		<a href="#/" data-toggle="modal" data-target="#newAddress" id="footer3Btn3"><i class="notesButtons fa2 fa sound fa-floppy-o fa-3x jq-mouseleave" aria-hidden="true"></i></a>
 		<a class="links1 hidden2" id="trashFavButton" href="#/"><i class="notesButtons fa2 fa fa-trash fa-3x sound hidden2" aria-hidden="true" style="margin-left:14%;"></i></a>
 		<a class="links1 hidden2" id="deselect" href="#/"><i class="notesButtons fa2 fa fa-eye-slash fa-3x sound hidden2" aria-hidden="true"></i></a>
 		
 		{{/unless}}
-		<a class="links1 showInfo" id="footer4Btn7" href="#/"><i class="footerBtn fa fa2 sound fa-info fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:28%;"></i></a>
-		<a class="links1 hideInfo hidden" id="footer4Btn8" href="#/"><i class="fa fa2 fa-arrow-left fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:26%;"></i></a>
+		<a class="links1 showInfo" id="footer3Btn7" href="#/"><i class="footerBtn fa fa2 sound fa-info fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:28%;"></i></a>
+		<a class="links1 hideInfo hidden" id="footer3Btn8" href="#/"><i class="fa fa2 fa-arrow-left fa-3x jq-mouseleave" aria-hidden="true" style="margin-left:26%;"></i></a>
 	</div>
 
 	<div id="addressFavourites">
@@ -864,7 +888,7 @@
 					
 					<div class="modal-footer">
 						<span id="editMessage1" style="margin-left:15px;color:green;"></span>
-						<button id="closeBtnAddress1" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button id="closeBtn1" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -906,7 +930,7 @@
 					</div>
 					<div class="modal-footer">
 						<span id="editMessage2" style="margin-left:15px;color:green;"></span>
-						<button id="closeBtnAddress2" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button id="closeBtn2" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>

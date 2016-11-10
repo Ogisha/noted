@@ -22,19 +22,17 @@ function typing(splitText) {
 	},10);
 }
 
-
-
 Template.favs.helpers({
 	
 	"check": function() {
-		if (Favourites.find().count() == 0)
+		if (Favourites.find({ createdBy: Meteor.userId()}).count() == 0)
 			return true;
 		else
 			return false;
 	},
 	
 	"returnFavs":function() {
-		return Favourites.find({}, { sort: { love: -1, title: 1 } });
+		return Favourites.find({ createdBy: Meteor.userId() }, { sort: { love: -1, title: 1 } });
 	},
 	
 	"returnType": function() {
@@ -102,8 +100,6 @@ Template.favs.events({
 			Favourites.update({ _id: temp }, { $set: { love: true } });
 	},
 
-
-	
 	"click #footer4Btn7": function() {
 		Session.set("selected", null);
 	},
@@ -114,7 +110,7 @@ Template.favs.events({
 		var title = event.target.urlTitle.value;
 		var url = "http://" + event.target.newUrl.value;
 		var comment = event.target.newUrlComment.value;
-		Favourites.insert({ type: type, title: title, url: url, comment: comment});
+		Favourites.insert({ createdBy: Meteor.userId(), type: type, title: title, url: url, comment: comment});
 		$("#editMessage1").append("Successfuly added!");
 		event.target.selectType.value = "";
 		event.target.urlTitle.value = "";
@@ -129,7 +125,7 @@ Template.favs.events({
 		var title = event.target.urlTitle.value;
 		var url = event.target.newUrl.value;
 		var comment = event.target.newUrlComment.value;
-		Favourites.update({ _id:temp},  { type: type1, title: title, url: url, comment: comment});
+		Favourites.update({ _id:temp},  { createdBy: Meteor.userId(), type: type1, title: title, url: url, comment: comment});
 		$("#editMessage2").append("Successfuly edited!");
 	},
 	
